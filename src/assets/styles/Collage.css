@@ -1,0 +1,179 @@
+/* Gallery container */
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    background-image: url('../images/collage/landscape-collage2.png'); /* Set your image background here */
+    margin: 0;
+    gap: 0;
+    height: 110vh;
+    overflow: hidden;
+}
+
+/* Main image */
+.main-image-container {
+    flex: 3;
+    padding: 0;
+    margin: 0;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+/* Thumbnails container */
+.thumbnails-container {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Portrait row */
+.portrait-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.portrait-thumbnail {
+    width: 33.33%; /* Each thumbnail takes up 1/3 of the row */
+    height: 500px; /* Ensures all portrait thumbnails have the same height */
+}
+
+.portrait-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    margin: 0;
+}
+
+/* Landscape row */
+.landscape-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transform: translateX(-50px); /* Start position for sliding */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition for opacity and sliding */
+}
+
+.landscape-thumbnail {
+    width: 48%; /* Each landscape thumbnail takes up almost half the row */
+    height: 400px; /* Ensures all landscape thumbnails have the same height */
+}
+
+.landscape-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    margin: 0;
+}
+
+/* Full Width Thumbnail */
+.full-width-thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+.full-width-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+/* Apply a fade-in effect to the image elements */
+.gallery-container img {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When the image is in the viewport, it will fade in and scale */
+.gallery-container img.in-view {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* For the individual thumbnail images, add some delay for staggered animations */
+.portrait-thumbnail img, .landscape-thumbnail img, .full-width-thumbnail img {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.portrait-thumbnail img.in-view, .landscape-thumbnail img.in-view, .full-width-thumbnail img.in-view {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Apply the landscape row's animation when it enters the viewport */
+.landscape-row.in-view {
+    opacity: 1;
+    transform: translateX(0); /* Reset to original position */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .main-image-container {
+        flex: 2;
+    }
+
+    .main-image {
+        height: 250px; /* Decrease the size of the main image */
+    }
+
+    .thumbnails-container {
+        flex: 4;
+    }
+
+    .portrait-thumbnail {
+        width: 50%; /* Adjust portrait thumbnails to take up 50% width */
+        height: 300px; /* Adjust portrait thumbnail height */
+    }
+
+    .landscape-thumbnail {
+        width: 100%; /* Landscape thumbnails should take up the full width */
+        height: 200px; /* Adjust landscape thumbnail height */
+    }
+
+    .full-width-thumbnail {
+        height: 200px; /* Adjust height for the full-width thumbnail */
+    }
+}
+
+/* Further adjustments for mobile devices */
+@media (max-width: 480px) {
+    .main-image {
+        height: 100%; /* Make the main image smaller */
+        display: block;
+        width: 200px;
+    }
+
+    .portrait-thumbnail {
+        width: 100%; /* Portrait thumbnails take up the full width */
+        height: 120px; /* Adjust portrait thumbnail height */
+    }
+
+    .landscape-thumbnail {
+        width: 100%; /* Landscape thumbnails take up the full width */
+        height: 80px; /* Adjust landscape thumbnail height */
+    }
+
+    .full-width-thumbnail {
+        height: 100px; /* Adjust full-width thumbnail height */
+    }
+}

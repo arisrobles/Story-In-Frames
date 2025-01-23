@@ -1,0 +1,105 @@
+.event3-container {
+    background-color: #39472c; /* Deep green background */
+    padding: 20px; /* Add padding around the container */
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent any content from exceeding the container */
+    box-sizing: border-box; /* Include padding in height calculation */
+    display: flex; /* Use flexbox to center the grid */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.event3-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 0; /* No gap between grid items */
+    height: 80%; /* Adjust grid height for smaller screens */
+    width: 90%; /* Adjust width percentage for the grid */
+    align-items: center; /* Vertically center items inside the grid */
+    justify-items: center; /* Horizontally center items inside the grid */
+}
+
+.event3-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the images take full height */
+    width: 100%; /* Ensure the images take full width */
+    overflow: hidden; /* Prevent overflow if any content exceeds the bounds */
+}
+
+.event3-image img {
+    width: 100%; /* Ensure images stretch to fill the width of their container */
+    height: 100%; /* Ensure images stretch to fill the height of their container */
+    object-fit: contain; /* Ensure the entire image is visible, no cropping */
+    border-radius: 0; /* No rounding to make images fit tightly */
+    box-shadow: none; /* Optional: Remove box-shadow to make them seamless */
+}
+
+.event3-leaf-left-container,
+.event3-leaf-right-container {
+    position: absolute;
+    top: 40%; /* Position near the top */
+    z-index: 10; /* Make sure it's on top */
+}
+
+.event3-leaf-left-container {
+    left: 2%;
+}
+
+.event3-leaf-right-container {
+    right: 2%;
+}
+
+.event3-leaf-left,
+.event3-leaf-right {
+    width: 200px; /* Reduced width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 1024px) {
+    .event3-container {
+        height: auto; /* Adjust container height */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .event3-grid {
+        width: 85%; /* Slightly narrower grid for medium screens */
+        height: 70%; /* Reduce height */
+    }
+
+    .event3-leaf-left,
+    .event3-leaf-right {
+        width: 150px; /* Smaller leaves for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .event3-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: auto; /* Let content dictate height */
+    }
+
+    .event3-grid {
+        width: 85%; /* Slightly wider for smaller screens */
+        height: 60%; /* Adjust grid height */
+    }
+
+    .event3-image img {
+        object-fit: cover; /* Adjust to make images fit nicely */
+    }
+
+    .event3-leaf-left-container {
+        left: 1%;
+    }
+    
+    .event3-leaf-right-container {
+        right: 1%;
+    }
+
+    .event3-leaf-left,
+    .event3-leaf-right {
+        width: 30px; /* Further reduce leaf size for smaller screens */
+    }
+}

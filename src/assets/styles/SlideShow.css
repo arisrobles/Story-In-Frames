@@ -1,0 +1,118 @@
+/* Reset margins and padding to eliminate any default spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #d2f0d1; /* Light green background color */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+}
+  
+.slideshow-background {
+    position: relative;
+    width: 85%; /* Increase width of the container */
+    height: 90%; /* Increase height of the container */
+    overflow: hidden;
+    padding: 0; /* Ensure no padding around the image */
+}
+  
+.slideshow-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits entirely without cropping */
+    display: block; /* Remove any extra space below the image */
+}
+  
+.slider-control {
+    position: absolute;
+    bottom: 10px; /* Bring the slider closer to the bottom of the image */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-control input {
+    width: 80%; /* Adjust size of the range slider */
+}
+
+.music-control {
+    position: absolute;
+    top: 45%; /* Position vertically at the center */
+    left: 50%; /* Position horizontally at the center */
+    transform: translate(-50%, -50%); /* Adjust for true centering */
+    z-index: 10; /* Ensure the button is above other elements */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade out transition */
+}
+
+.music-control.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when hidden */
+}
+
+.music-control button {
+    padding: 20px 35px; /* Adjust padding for better appearance */
+    background-color: #d0d0d0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-control button:hover {
+    background-color: #d9d9d9;
+}
+
+.music-control button:focus {
+    outline: none;
+}
+
+/* Media query for smaller screens (tablets and mobile) */
+@media (max-width: 768px) {
+    .slideshow-background {
+        width: 100%; /* Make the container full width */
+        height: 75%; /* Adjust height for smaller screens */
+    }
+    
+    .slideshow-background img {
+        object-fit: cover; /* Ensure image fills the container without stretching */
+    }
+    
+    .slider-control input {
+        width: 90%; /* Make the slider more prominent on smaller screens */
+    }
+    
+    .slider-control {
+        bottom: 5px; /* Reduce space between the slider and the image */
+    }
+}
+
+/* Media query for very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .slideshow-background {
+        width: 100%; /* Full width */
+        height: 65%; /* Reduce height further on very small screens */
+    }
+    
+    .slider-control input {
+        width: 95%; /* Slider takes almost full width */
+    }
+    
+    .slider-control {
+        bottom: 30%; /* Reduce space further on very small screens */
+        display: none;
+    }
+
+    .slideshow-container {
+        height: 100%;
+    }
+}

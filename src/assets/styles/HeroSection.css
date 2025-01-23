@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    overflow-x: hidden;
+  }
+  
+.header {
+    background-color: #4b401b; /* Dark olive background */
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Thin */
+    height: 100vh; /* Makes the section fill the entire viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; /* Optional, adjust as needed */
+    position: relative; /* Needed for absolute positioning of the image */
+  }
+  
+  .logo-image {
+    max-width: 100%; /* Make logo responsive */
+    height: auto;
+    position: relative;
+    top: -50px; /* Move logo image upwards */
+  }
+  
+  .nav-menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* Increased gap for better spacing */
+  }
+  
+  .nav-link {
+    color: #f5f5f5;
+    font-size: 40px; /* Increased font size for larger nav items */
+    font-weight: normal;
+    transition: color 0.3s;
+    text-transform: uppercase; /* Matches the style in the image */
+    letter-spacing: 4px; /* Increased spacing between letters for bigger items */
+  }
+  
+  .nav-link:hover {
+    color: #d3a625; /* Highlight color on hover */
+  }
+  
+  .decorative-border {
+    margin-top: 40px; /* Increased spacing for better layout */
+    width: 80%; /* Make it narrower for design purposes */
+    height: 4px;
+    background-image: linear-gradient(to right, #d3a625, #f5f5f5, #d3a625);
+  }
+  
+  .decorative-image {
+    margin-top: 40px; /* Position the image below the navigation */
+    width: 100%; /* Increased width to make it larger */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .decorative-border-image {
+    width: 100%; /* Make the image take up full width of the container */
+    height: auto;
+  }
+  
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 50px; /* Slightly reduce the gap between navigation items */
+  }
+
+  .nav-link {
+    font-size: 32px; /* Slightly reduce font size */
+    letter-spacing: 3px; /* Reduce letter spacing */
+  }
+
+  .decorative-border {
+    width: 90%; /* Make the border a bit wider on mid-size screens */
+  }
+
+  .logo-image {
+    max-width: 80%; /* Make the logo smaller on medium screens */
+    top: -30px; /* Adjust the position of the logo */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-wrap: wrap; /* Allow wrapping if content doesn't fit */
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Reduce the gap between items */
+  }
+
+  .nav-link {
+    font-size: 28px; /* Reduce font size on small screens */
+    letter-spacing: 2px; /* Further reduce letter spacing */
+  }
+
+  .decorative-border {
+    width: 95%; /* Make the decorative border almost full width */
+  }
+
+  .logo-image {
+    max-width: 60%; /* Make logo even smaller on smaller screens */
+    top: -20px; /* Adjust the position of the logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60vh;
+  }
+  .nav-menu {
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    justify-content: space-evenly; /* Spread out the links evenly */
+    gap: 10px; /* Minimize the gap between items */
+  }
+
+  .nav-link {
+    font-size: 24px; /* Even smaller font size */
+    letter-spacing: 1px; /* Minimize letter spacing */
+  }
+
+  .logo-image {
+    max-width: 100%; /* Further reduce logo size */
+  }
+
+  .decorative-border {
+    width: 100%; /* Make the border full width */
+  }
+
+  .decorative-image {
+    width: 100%; /* Make the decorative image slightly smaller */
+    margin-top: 20px;
+  }
+}

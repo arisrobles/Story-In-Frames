@@ -1,0 +1,58 @@
+.image-layout {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    gap: 50px; /* Adjust spacing between images for better responsiveness */
+    padding: 20px;
+    background-color: #2f4f4f;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .single-image,
+  .collage-image {
+    opacity: 0; /* Start with the images hidden */
+    transform: translateY(100px); /* Move the images down */
+    transition: all 0.6s ease-in-out; /* Smooth transition for opacity and position */
+    max-width: 40%; /* Ensure images fit well in smaller viewports */
+  }
+  
+  .single-image.visible,
+  .collage-image.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+  }
+  
+  .single-image img,
+  .collage-image img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure proper fitting */
+  }
+  
+  @media (max-width: 768px) {
+    .image-layout {
+      gap: 30px; /* Reduce spacing between images */
+      padding: 10px; /* Add padding for smaller viewports */
+      height: auto; /* Let content dictate height */
+    }
+  
+    .single-image,
+    .collage-image {
+      max-width: 45%; /* Adjust image width for smaller viewports */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-layout {
+      gap: 10px; /* Further reduce spacing */
+      padding: 5px; /* Minimize padding */
+    }
+  
+    .single-image,
+    .collage-image {
+      max-width: 48%; /* Ensure images fit within smaller devices */
+    }
+  }
+  

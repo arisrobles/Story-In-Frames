@@ -1,0 +1,186 @@
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Main container style */
+.pricing-more-container {
+    display: flex;
+    flex-direction: row; /* Keeps the image on the right */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #e0f7e8;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    width: 100%; /* Ensure it takes up 100% of the available width */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.pricing-more-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden; /* Prevent image section from overflowing */
+}
+
+.pricing-more-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image fits within its container */
+}
+
+.pricing-more-details-section {
+    flex: 1;
+    padding-left: 20px;
+    position: relative;
+    overflow: hidden; /* Prevent overflow in the details section */
+}
+
+.pricing-more-wed-title {
+    font-size: 3.2rem;
+    color: #333;
+    margin-top: 0px;
+}
+
+.pricing-more-other-subtitle {
+    font-size: 2.2rem;
+    color: #333;
+    margin-top: -50px;
+}
+
+.pricing-more-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15%;
+}
+
+.pricing-more-features li {
+    font-size: 2.3rem;
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.pricing-more-summary {
+    margin-top: 20px;
+}
+
+.pricing-more-total-price {
+    font-size: 2.3rem;
+    margin: 5px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.pricing-more-infos-container {
+    position: relative;
+    height: 78vh; /* Set the height of the image container */
+    background-image: url('../images/pricing/cricle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.pricing-more-infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    color: rgb(20, 20, 20);
+    z-index: 1; /* Ensures the text is on top of the background image */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .pricing-more-image {
+        height: 85vh; /* Decrease image height */
+    }
+
+    .pricing-more-details-section {
+        padding-left: 15px;
+    }
+
+    .pricing-more-wed-title {
+        font-size: 2.8rem;
+    }
+
+    .pricing-more-other-subtitle {
+        font-size: 2rem;
+    }
+
+    .pricing-more-features li {
+        font-size: 2rem;
+    }
+
+    .pricing-more-total-price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .pricing-more-image {
+        height: 75vh; /* Decrease image height further */
+    }
+
+    .pricing-more-details-section {
+        padding-left: 10px;
+    }
+
+    .pricing-more-wed-title {
+        font-size: 2.5rem;
+    }
+
+    .pricing-more-other-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .pricing-more-features li {
+        font-size: 1.8rem;
+    }
+
+    .pricing-more-total-price {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-more-container {
+        height: 37vh;
+    }
+
+    .pricing-more-image {
+        height: 37vh; /* Further decrease image height */
+    }
+
+    .pricing-more-details-section {
+        padding-left: 5px;
+    }
+
+    .pricing-more-infos-container {
+        position: relative;
+        height: 37vh; /* Set the height of the image container */
+        margin-top: -13%;
+    }
+
+    .pricing-more-wed-title {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .pricing-more-other-subtitle {
+        font-size: 0.5rem;
+        margin-top: -6%;
+    }
+
+    .pricing-more-features li {
+        font-size: 0.5rem;
+        margin-left: -30%;
+    }
+
+    .pricing-more-total-price {
+        font-size: 0.5rem;
+        margin-left: -30%;
+        margin-top: -15px;
+    }
+}

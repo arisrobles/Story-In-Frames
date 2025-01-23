@@ -1,0 +1,101 @@
+.warm-moments-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d8d5c9; /* Background color */
+    padding: 20px;
+    height: 80vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Thin */
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .camera-image {
+    max-width: 90%;
+    height: auto;
+  }
+  
+  .text-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hello-image {
+    max-width: 700px; /* Adjust size */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #020202;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .warm-moments-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      height: auto; /* Allow height to adjust */
+      padding: 15px;
+    }
+  
+    .image-section,
+    .text-section {
+      flex: none; /* Remove flex ratio */
+      width: 100%; /* Make items full width */
+      padding: 10px;
+    }
+  
+    .camera-image,
+    .hello-image {
+      max-width: 80%; /* Shrink images on smaller screens */
+    }
+  
+    .description {
+      font-size: 18px; /* Adjust font size */
+      text-align: center; /* Center text */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .warm-moments-container {
+      padding: 10px;
+    }
+  
+    .camera-image,
+    .hello-image {
+      max-width: 90%; /* Adjust image size further */
+    }
+  
+    .description {
+      font-size: 16px;
+      line-height: 1.6; /* Reduce line height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .description {
+      font-size: 14px; /* Smallest font for very small devices */
+    }
+  
+    .hello-image {
+      max-width: 100%; /* Full-width image */
+    }
+  
+    .camera-image {
+      max-width: 100%;
+      height: auto; /* Ensure proper scaling */
+    }
+  }
+  

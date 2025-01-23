@@ -1,0 +1,96 @@
+/* General container styles */
+.event-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Main banner styles */
+.event-banner {
+  position: relative;
+  background-image: url('../images/events/banner.png'); /* Replace with your banner image URL */
+  background-size: cover;
+  background-position: center;
+  height: 600px; /* Default height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Full height on larger screens */
+}
+
+/* Overlay on top of the banner */
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image grid styles inside the banner */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  position: absolute; /* Position grid inside the banner */
+  bottom: 20px; /* Adjust the position as needed */
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure grid is above the overlay */
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .event-grid {
+    display: flex; /* Switch to a flex layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 15px; /* Reduce the gap between images */
+    padding: 10px; /* Adjust padding */
+    scroll-snap-type: x mandatory; /* Enable smooth snapping for scroll */
+  }
+
+  .grid-item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 150px; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    scroll-snap-align: center; /* Snap items to center */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid-item img {
+    width: 100%; /* Ensure images fit their container */
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-banner {
+    height: 37vh;
+  }
+  .event-grid {
+    gap: 10px; /* Further reduce the gap for smaller screens */
+    padding: 5px;
+  }
+
+  .grid-item {
+    width: 120px; /* Further decrease width */
+  }
+}

@@ -1,0 +1,111 @@
+.corporate-events {
+    background-color: #2f4f4f; /* Matches the background */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .banner-with-collage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 70px 30px 70px; /* Top, Right, Bottom, Left */
+  }
+  
+  .side-collage-container {
+    flex: 1;
+  }
+  
+  .side-collage {
+    width: 100%;
+  }
+  
+  .side-collage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .central-banner-container {
+    flex: 2;
+    position: relative;
+    text-align: center;
+  }
+  
+  .central-banner img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-collage-below {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 70px; /* Top and Bottom: 0, Left and Right: 70px */
+  }
+  
+  .event-image {
+    width: calc(20% - 20px); /* Ensure equal size for event images */
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .banner-with-collage {
+      gap: 30px; /* Reduce gap between sections */
+      margin: 20px 40px; /* Adjust margins for medium-sized screens */
+    }
+  
+    .image-collage-below {
+      margin: 0 40px; /* Adjust margins for medium-sized screens */
+    }
+  
+    .event-image {
+      width: calc(25% - 15px); /* Slightly increase the width for better layout */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .banner-with-collage {
+      gap: 20px; /* Reduce gap further */
+      margin: 15px 20px; /* Adjust margins for smaller screens */
+    }
+  
+    .image-collage-below {
+      margin: 0 20px; /* Adjust margins for smaller screens */
+    }
+  
+    .event-image {
+      width: calc(33.33% - 10px); /* Make images wider */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-with-collage {
+      gap: 5px; /* Further reduce gap */
+      margin: 10px 10px; /* Minimal margins for mobile */
+    }
+  
+    .image-collage-below {
+      margin: 0px; /* Minimal margins for mobile */
+      gap: 5px;
+    }
+  
+    .event-image {
+      width: calc(21% - 10px); /* Adjust image size for better fit on small screens */
+    }
+
+    .corporate-events {
+      padding: 0;
+    }
+  }
+  

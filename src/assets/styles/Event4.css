@@ -1,0 +1,74 @@
+.event4-container {
+    background-color: #39472c; /* Deep green background */
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent any content from exceeding the container */
+    box-sizing: border-box; /* Include padding in height calculation */
+    display: flex; /* Use flexbox to center the grid */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.event4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for 3 images per row */
+    gap: 0; /* No gap between grid items */
+    height: 100%; /* Ensure grid fills container's height */
+    width: 70%; /* Ensure the grid takes up 70% width of the container */
+    align-items: stretch; /* Stretch the images vertically */
+    justify-items: stretch; /* Stretch the images horizontally */
+}
+
+.event4-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the images take full height */
+    width: 100%; /* Ensure the images take full width */
+    overflow: hidden; /* Prevent overflow if any content exceeds the bounds */
+    margin: 0; /* Remove any margin between images */
+}
+
+.event4-image img {
+    width: 100%; /* Ensure images stretch to fill the width of their container */
+    height: 100%; /* Ensure images stretch to fill the height of their container */
+    object-fit: cover; /* Ensure the images fill the container without any gaps */
+    border-radius: 0; /* No rounding to make images fit tightly */
+    box-shadow: none; /* Optional: Remove box-shadow to make them seamless */
+}
+
+@media (max-width: 1024px) {
+    .event4-grid {
+        width: 80%; /* Adjust grid width for medium-sized screens */
+    }
+
+    .event4-image img {
+        width: 100%; /* Make images stretch fully to fill container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .event4-grid {
+        width: 90%; /* Adjust grid width for smaller screens */
+    }
+
+    .event4-image img {
+        width: 100%; /* Ensure images take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .event4-grid {
+        width: 95%; /* Adjust grid width for very small screens */
+    }
+
+    .event4-image img {
+        width: 100%; /* Ensure images take full width */
+        height: 100%; /* Maintain aspect ratio */
+    }
+    .event4-container {
+        height: 37vh;
+    }
+}

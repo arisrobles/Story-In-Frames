@@ -1,0 +1,149 @@
+.prenup-container {
+  background-color: #94a571; /* Light green background */
+  padding: 30px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; /* Thin */
+  height: 100vh; /* Adjusted height for responsiveness */
+}
+
+.title {
+  font-size: 2.8rem; /* Slightly smaller font size */
+  color: #333;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 4.5rem; /* Reduced title font size */
+  color: #333;
+  margin-top: -50px;
+}
+
+.subsub {
+  font-size: 2rem; /* Adjusted font size */
+  color: #333;
+  margin-top: -40px;
+}
+
+.rates-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap between cards */
+}
+
+.rate-card {
+  background-color: #94a571;
+  width: 300px; /* Reduced width */
+  text-align: center;
+  flex: 1;
+  max-width: 400px; /* Ensures consistent size */
+  padding: 20px; /* Adjusted padding inside cards */
+}
+
+.rate-icon img {
+  width: 120px; /* Adjusted icon size */
+}
+
+.rate-name {
+  font-size: 2.8rem; /* Reduced font size */
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.rate-details {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0; /* Adjusted spacing */
+}
+
+.rate-details li {
+  font-size: 1.8rem; /* Adjusted font size */
+  color: #000000;
+  margin-bottom: 8px; /* Adjusted margin */
+}
+
+.total {
+  font-size: 2rem; /* Adjusted total price font size */
+  color: #000000;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+  .prenup-container {
+    height: 80vh; /* Reduced height for smaller screens */
+  }
+
+  .rates-container {
+    gap: 15px; /* Smaller gap between cards */
+  }
+
+  .rate-card {
+    width: 250px; /* Further reduce card width */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .rate-name {
+    font-size: 2.5rem; /* Reduced font size */
+  }
+
+  .rate-details li {
+    font-size: 1.6rem; /* Reduced list item font size */
+  }
+
+  .total {
+    font-size: 1.8rem; /* Reduced total font size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prenup-container {
+    height: 70vh; /* Further reduce height */
+    width: auto;
+  }
+
+  .rates-container {
+    gap: 10px; /* Minimal gap */
+  }
+
+  .title {
+    font-size: 0.8rem; /* Slightly smaller font size */
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .subtitle {
+    font-size: 2rem; /* Reduced title font size */
+    color: #333;
+    margin-top: -15px;
+  }
+  
+  .subsub {
+    font-size: 1rem; /* Adjusted font size */
+    color: #333;
+    margin-top: -30px;
+  }
+
+  .rate-card {
+    width: 20px; /* Compact card width */
+    padding: 0px; /* Compact padding */
+  }
+
+  .rate-name {
+    font-size: 1rem; /* Compact font size */
+  }
+
+  .rate-details li {
+    font-size: 0.7rem; /* Compact list font size */
+  }
+
+  .total {
+    font-size: 0.7rem; /* Compact list font size */
+  }
+
+  .rate-icon img {
+    width: 80px; /* Adjusted icon size */
+  }
+}

@@ -1,0 +1,75 @@
+.event-design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c; /* Dark background color */
+    height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Thin */
+  }
+  
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-column img,
+  .right-column img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
+  }
+  
+
+  .center-text .real-text {
+    font-size: 70px; /* Increase the font size of the text */
+    padding: 0 130px;
+    margin-top: 50px;
+  }
+  
+  .authentic-text span {
+    display: block;
+    font-size: 60px; /* Adjust the size of each letter */
+    line-height: 1.2; /* Adjust line height to reduce space between letters */
+  }
+  
+  .icon {
+    margin: 10px 0; /* Space for the icon */
+    font-size: 36px; /* Adjust icon size */
+  }
+  
+  .icon img {
+    width: 200px; /* Adjust the width of the leaf icon image */
+    height: 100%;
+    object-fit: contain;
+  }
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-design {
+    height: 34vh; /* Reduce overall height */
+  }
+
+  .left-column img,
+  .right-column img {
+    width: 100%; /* Ensure images scale to fit the section */
+    max-width: 100%; /* Prevent images from exceeding the section width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .center-text .real-text {
+    font-size: 3.5vw; /* Smaller text */
+    padding: 0 10px;
+  }
+
+  .authentic-text span {
+    font-size: 3vw; /* Adjust text size for smaller screens */
+  }
+
+  .icon img {
+    width: 12vw; /* Reduce icon size */
+  }
+}

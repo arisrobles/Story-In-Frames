@@ -1,0 +1,144 @@
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  box-sizing: border-box; /* Prevent content overflow due to padding and borders */
+}
+
+/* Main container style */
+.pricing-corpo-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+}
+
+.pricing-corpo-image-section {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+}
+
+.pricing-corpo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pricing-corpo-details-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+}
+
+.pricing-corpo-rates-title {
+  font-size: 3.7rem;
+  margin-bottom: -4%;
+}
+
+.pricing-corpo-event-type {
+  font-size: 5.2rem;
+  margin-bottom: 20px;
+}
+
+.pricing-corpo-features-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 3.3rem;
+  font-weight: 400;
+  margin: 20px 0;
+  line-height: 4.5rem;
+}
+
+.pricing-corpo-features-list li {
+  margin: 5px 0;
+}
+
+.pricing-corpo-total-price {
+  font-size: 3.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pricing-corpo-rates-title {
+    font-size: 3rem;
+  }
+
+  .pricing-corpo-event-type {
+    font-size: 4.5rem;
+  }
+
+  .pricing-corpo-features-list {
+    font-size: 2.8rem;
+  }
+
+  .pricing-corpo-total-price {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-corpo-rates-title {
+    font-size: 2.6rem;
+  }
+
+  .pricing-corpo-event-type {
+    font-size: 3.5rem;
+  }
+
+  .pricing-corpo-features-list {
+    font-size: 2.4rem;
+  }
+
+  .pricing-corpo-total-price {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-corpo-container {
+    height: auto; /* Allow height to adjust based on content */
+    overflow-x: hidden; /* Explicitly prevent horizontal scrolling */
+  }
+
+  .pricing-corpo-rates-title {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .pricing-corpo-event-type {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: -0px;
+  }
+
+  .pricing-corpo-features-list {
+    font-size: 0.8rem;
+    line-height: 15px;
+    margin-top: 1px;
+  }
+
+  .pricing-corpo-total-price {
+    font-size: 0.8rem;
+    line-height: 15px;
+    margin-top: -20px;
+  }
+}
