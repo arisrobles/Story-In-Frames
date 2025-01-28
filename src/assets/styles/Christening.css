@@ -9,6 +9,11 @@
     }
   }
 
+  /* Add this to ensure elements will animate when in view */
+.animate {
+    animation: slideInFromLeft 2s ease-out;
+}
+
 .christening-container {
     height: 100vh;
     display: flex;
@@ -29,7 +34,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-.christening-image.animate {
+.christening-image.animate-element {
     animation: slideInFromLeft 2s ease-out; /* Slower entrance animation */
   }
 
@@ -48,7 +53,11 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-  }
+}
+
+.second-section .animate-element {
+    animation: slideInFromLeft 2s ease-out;
+}
 
 /* Third Section for displaying images in a row */
 .image-row-section {
@@ -70,7 +79,6 @@
     flex: 1;
 }
 
-/* Individual styling for each image */
 .image-1,
 .image-2,
 .image-3 {
@@ -84,24 +92,24 @@
 .image-1 {
     margin-left: 14%;
 }
+
 .image-2 {
     margin-left: 20%;
 }
-
 
 @media (max-width: 1024px) {
     .christening-image {
       max-width: 75%;
     }
-  }
+}
 
 @media (max-width: 768px) {
     .christening-image {
       max-width: 85%;
     }
-  }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .christening-container {
       padding: 10px;
       height: 30vh;
@@ -124,26 +132,13 @@
     }
 
     /* Individual styling for each image */
-.image-1,
-.image-2,
-.image-3 {
-    height: 150px; /* Set a fixed height for all images */
+    .image-1,
+    .image-2,
+    .image-3 {
+        height: 150px; /* Set a fixed height for all images */
+    }
 
-}
-
-.image-1 {
-    margin-left: -40%;
-}
-.image-2 {
-    margin-left: -170%;
-}
-
-.image-3 {
-    margin-left: -270%;
-}
     .christening-image {
       max-width: 85%;
     }
-
-
 }
