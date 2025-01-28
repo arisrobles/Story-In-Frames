@@ -138,6 +138,16 @@
         height: 150px; /* Set a fixed height for all images */
     }
 
+    .image-1 {
+      margin-left: -40%;
+  }
+  .image-2 {
+      margin-left: -170%;
+  }
+  
+  .image-3 {
+      margin-left: -270%;
+  }
     .christening-image {
       max-width: 85%;
     }
