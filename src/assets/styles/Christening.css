@@ -1,0 +1,149 @@
+@keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.christening-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/christening/christening-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+.christening-image {
+    max-width: 65%;
+    height: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+.christening-image.animate {
+    animation: slideInFromLeft 2s ease-out; /* Slower entrance animation */
+  }
+
+.christening-image:hover {
+    transform: scale(1.02);
+  }
+
+/* Second Section */
+.second-section {
+    height: 100vh;
+    background-image: url(../images/christening/christening2.jpg); /* Change to your desired image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+/* Third Section for displaying images in a row */
+.image-row-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between; /* Ensures the images are spread across */
+    align-items: center;
+    background-color: #3c1a1a;
+    padding: 20px;
+    gap: 10px; /* Adjust gap between the images (narrow gap) */
+    flex-wrap: nowrap; /* Prevent images from stacking vertically */
+}
+
+/* Image container for each individual image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* Individual styling for each image */
+.image-1,
+.image-2,
+.image-3 {
+    height: 900px; /* Set a fixed height for all images */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures images are fully visible without distortion */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-1 {
+    margin-left: 14%;
+}
+.image-2 {
+    margin-left: 20%;
+}
+
+
+@media (max-width: 1024px) {
+    .christening-image {
+      max-width: 75%;
+    }
+  }
+
+@media (max-width: 768px) {
+    .christening-image {
+      max-width: 85%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .christening-container {
+      padding: 10px;
+      height: 30vh;
+      width: auto;
+    }
+
+    .second-section {
+      padding: 5px;
+      height: 30vh;
+      width: auto;
+    }
+
+    .image-row-section {
+      height: 30vh; /* Adjust height for smaller screens */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .image-container {
+      margin-bottom: 20px;
+    }
+
+    /* Individual styling for each image */
+.image-1,
+.image-2,
+.image-3 {
+    height: 150px; /* Set a fixed height for all images */
+
+}
+
+.image-1 {
+    margin-left: -40%;
+}
+.image-2 {
+    margin-left: -170%;
+}
+
+.image-3 {
+    margin-left: -270%;
+}
+    .christening-image {
+      max-width: 85%;
+    }
+
+
+}

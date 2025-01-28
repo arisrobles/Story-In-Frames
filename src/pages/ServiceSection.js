@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/ServiceSection.css';  // Make sure to create and link your CSS file
+import '../assets/styles/ServiceSection.css';  // Ensure the path to your CSS file is correct
 
 const ServiceSection = () => {
   return (
@@ -7,19 +7,21 @@ const ServiceSection = () => {
       <div className="text-container">
         <img
           className="services-title-image"
-          src={require("../assets/images/logos/service-title.png")} // Replace with your actual image path
+          src={require("../assets/images/logos/service-title.png")} // Ensure correct path
           alt="Services Title"
         />
         <p className="services-description">Affordable & Flexible Packages to Suit Your Budget</p>
       </div>
+
       <div className="content-container">
         <div className="image-container">
           <img
             className="camera-icon"
-            src={require("../assets/images/logos/service-image.png")} // Update with the actual image path
+            src={require("../assets/images/logos/service-image.png")} // Ensure correct path
             alt="Camera Icon"
           />
         </div>
+
         <div className="services-list">
           <ul>
             <li>PRENUP</li>

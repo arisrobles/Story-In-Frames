@@ -3,13 +3,13 @@ import '../assets/styles/Collage.css'; // Include CSS for the styles
 
 const Collage = () => {
   const images = [
-    { id: 1, src: require('../assets/images/collage/main-image.png'), alt: 'Image 1', type: 'portrait' },
-    { id: 2, src: require('../assets/images/gallery/gallery2.png'), alt: 'Image 2', type: 'portrait' },
-    { id: 3, src: require('../assets/images/gallery/gallery3.png'), alt: 'Image 3', type: 'portrait' },
-    { id: 4, src: require('../assets/images/gallery/gallery4.png'), alt: 'Image 4', type: 'landscape' },
-    { id: 5, src: require('../assets/images/collage/landscape-collage.png'), alt: 'Image 5', type: 'landscape' },
-    { id: 6, src: require('../assets/images/collage/landscape-collage2.png'), alt: 'Image 6', type: 'landscape' },
-    { id: 7, src: require('../assets/images/collage/last-collage.png'), alt: 'Image 7', type: 'landscape' },
+    { id: 1, src: require('../assets/images/collage/main-image.jpg'), alt: 'Image 1', type: 'portrait' },
+    { id: 2, src: require('../assets/images/collage/collage1.jpg'), alt: 'Image 2', type: 'portrait' },
+    { id: 3, src: require('../assets/images/collage/collage2.jpeg'), alt: 'Image 3', type: 'portrait' },
+    { id: 4, src: require('../assets/images/collage/collage3.jpg'), alt: 'Image 4', type: 'landscape' },
+    { id: 5, src: require('../assets/images/collage/landscape-collage.jpg'), alt: 'Image 5', type: 'landscape' },
+    { id: 6, src: require('../assets/images/collage/landscape-collage2.jpg'), alt: 'Image 6', type: 'landscape' },
+    { id: 7, src: require('../assets/images/collage/last-collage.jpg'), alt: 'Image 7', type: 'landscape' },
   ];
 
   const [currentImage, setCurrentImage] = useState(images[0].src);

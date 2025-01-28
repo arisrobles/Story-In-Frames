@@ -1,116 +1,58 @@
-/* Existing CSS for fade-in and slide effects */
-
 .collage-container {
-    display: flex;
-    background-color: #1b1b1b;
-    color: #fff;
-    background-image: url("../images/gallery/gallery7-back.png");
-    background-size: cover;
-    background-position: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    height: 100vh;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1b1b;
+  color: #fff;
+  background-image: url("../images/frames/background-frame.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Ensure no outer margin */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.collage-container.visible {
+  opacity: 1;
+}
+
+.images-wrapper {
+  display: flex;
+  height: 100%; /* Take full height of the container */
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.image {
+  height: 100%; /* Stretch to the full height of the container */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area properly */
+  margin: 0; /* Remove any margin around the images */
+  opacity: 0;
+  transform: scale(0.95); /* Optional for subtle animation */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.image.visible {
+  opacity: 1;
+  transform: scale(1); /* Animate back to full size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collage-container {
+    padding: 0; /* Ensure no padding for smaller screens */
+    height: 30vh; /* Adjust height for smaller screens */
   }
-  
-  .collage-container.visible {
-    opacity: 1; /* Make the container visible when it becomes "visible" */
+
+  .images-wrapper {
+    height: 100%; /* Maintain full height in smaller screens */
   }
-  
-  .left-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+
+  .image {
+    height: 100%; /* Stretch to the container’s height */
+    width: auto; /* Keep aspect ratio */
   }
-  
-  .main-images {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 0;
-    margin-left: 0%;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth sliding effect */
-  }
-  
-  .main-images.visible {
-    opacity: 1;
-    transform: translateX(0); /* Bring the image to its original position */
-  }
-  
-  .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0;
-    height: 100%;
-  }
-  
-  .portrait-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    margin: 0;
-    height: 100%;
-  }
-  
-  .portraits-image {
-    width: 100%;
-    height: calc(34.30% - 10px);
-    object-fit: cover;
-    border-radius: 0;
-    margin: 0;
-    margin-left: 22%;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .portraits-image.visible {
-    opacity: 1;
-    transform: translateY(0); /* Bring the portrait images to their original position */
-  }
-  
-  /* Remove gap between images */
-  .left-section img {
-    margin-bottom: 0;
-  }
-  
-  .right-section .portrait-section img {
-    margin-top: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .collage-container {
-      height: 34vh;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  
-    .left-section,
-    .right-section {
-      width: 100%;
-      height: 50vh;
-    }
-  
-    .main-images {
-      width: 100%;
-      height: auto;
-      margin-top: -65%;
-    }
-  
-    .portraits-image {
-      width: 100%;
-      height: 23.2%;
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
-  
+}

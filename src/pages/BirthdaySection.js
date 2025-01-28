@@ -36,13 +36,13 @@ const BirthdaySection = () => {
     <div className="image-layout">
       <div className="single-image" ref={singleImageRef}>
         <img
-          src={require('../assets/images/birthday/birthday4.png')} // Replace with the actual filename
+          src={require('../assets/images/birthday/birthday4.jpg')} // Replace with the actual filename
           alt="Single image"
         />
       </div>
       <div className="collage-image" ref={collageImageRef}>
         <img
-          src={require('../assets/images/birthday/birthday5.png')} // Replace with the actual filename
+          src={require('../assets/images/birthday/birthday5.jpg')} // Replace with the actual filename
           alt="Collage image"
         />
       </div>

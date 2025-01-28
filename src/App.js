@@ -4,6 +4,7 @@ import './App.css'; // Optional: Add global styles if needed
 import AboutSection from './pages/AboutSection';
 import ServiceSection from './pages/ServiceSection';
 import GallerySection from './pages/GallerySection';
+import Gallery from './pages/Gallery';
 import Slideshow from './pages/SlideShow';
 import Collage from './pages/Collage';
 import FramesSection from './pages/FrameSection';
@@ -22,6 +23,9 @@ import PricingMore from './pages/PricingMore'
 import PricingCorpo from './pages/PricingCorpo';
 import Outro from './pages/Outro';
 import Faqs from './pages/Faqs';
+import Testimonials from './pages/Testimonials';
+import Honest from './pages/Honest';
+import Christening from './pages/Christening';
 
 function App() {
   return (
@@ -30,12 +34,15 @@ function App() {
       <AboutSection/>
       <ServiceSection/>
       <GallerySection/>
+      <Gallery/>
       <Slideshow/>
       <Collage/>
+      <Honest/>
       <FramesSection/>
       <Instagram />
       <BirthdaySection/>
       <Birthday/>
+      <Christening/>
       <CorporateEvents/>
       <Event1/>
       <Event2/>
@@ -48,6 +55,7 @@ function App() {
       <PricingCorpo/>
       <Outro/>
       <Faqs/>
+      <Testimonials/>
     </div>
   );
 }

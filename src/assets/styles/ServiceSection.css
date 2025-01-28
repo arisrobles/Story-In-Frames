@@ -1,141 +1,147 @@
 /* General Styles */
 .services-section {
-    background-color: #d0e1a4; /* Soft green background */
-    display: flex;
-    justify-content: center;
-    padding: 20px 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100; /* Thin */
-    position: relative;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  
+  background-color: #d0e1a4; /* Soft green background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; /* Thin */
+  position: relative;
+  height: 100vh;
+}
+
+.text-container {
+  text-align: center;
+  margin-bottom: 40px; /* Add space between title and content */
+}
+
+.services-title-image {
+  max-width: 500px; /* Ensure the title image is not too large */
+}
+
+.services-description {
+  font-size: 42px; /* Adjust font size for description */
+  color: #4b401b;
+  text-transform: uppercase;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 20px;
+  padding-top: 20px; /* Reduce top padding */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.camera-icon {
+  max-width: 100%; /* Ensure the image scales properly */
+  height: auto;
+}
+
+.services-list {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.services-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.services-list li {
+  font-size: 45px; /* Adjust font size for better readability */
+  color: #4b401b;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.services-list li:hover {
+  color: #d3a625; /* Highlight color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .content-container {
-    display: flex;
-    flex-direction: row; /* Align items in a row */
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 20px;
-    padding-top: 80px; /* Adjust to ensure text doesn't overlap */
-    overflow-x: hidden;
-  }
-  
-  .image-container {
-    flex: 1; /* Takes up 50% of the space */
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .camera-icon {
-    width: 100%; /* Ensure responsive image */
-    height: auto;
-    max-width: 100%; /* Make sure the image adjusts within the container */
-    margin-top: 50px;
-  }
-  
-  .services-list {
-    flex: 1; /* Takes up 50% of the space */
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .services-description {
-    font-size: 22px; /* Slightly smaller text for tablet screens */
+      padding-top: 40px;
   }
 
-  .services-list ul {
-    list-style-type: disc; /* Ensures bullet points are visible */
-    padding-left: 20px;
-    margin-top: 20px; /* Reduced margin for smaller screens */
-  }
-  
-  .services-list li {
-    font-size: 44px; /* Adjusted for mobile */
-    color: #4b401b;
-    margin: 10px 0;
-    text-decoration: underline; /* No underline */
-    cursor: pointer;
-    transform: rotate(-5deg); /* Add a slant to list items */
-  }
-  
-  .services-list li:hover {
-    color: #d3a625; /* Highlight color on hover */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .content-container {
-      flex-direction: column; /* Stack content vertically */
-      padding-top: 50px;
-    }
-  
-    .camera-icon {
-      max-width: 80%; /* Scale image size */
+  .camera-icon {
+      max-width: 80%;
       margin-top: 20px;
-    }
-  
-    .services-description {
-      font-size: 22px; /* Slightly smaller text for tablet screens */
-    }
-  
-    .services-list ul {
-      margin-top: 20px;
-    }
-  
-    .services-list li {
-      font-size: 30px; /* Adjust list item font size for medium screens */
-    }
   }
-  
-  @media (max-width: 768px) {
-    .services-section {
-      padding: 15px; /* Slightly reduce padding */
-    }
-  
-    .content-container {
-      flex-direction: column; /* Stack items vertically */
-      padding-top: 40px;
-    }
-  
-    .camera-icon {
-      max-width: 70%; /* Scale image for smaller screens */
-      margin-top: 20px;
-    }
-  
-    .services-description {
+
+  .services-description {
       font-size: 20px; /* Adjust description text */
-    }
-  
-    .services-list li {
-      font-size: 24px; /* Make list items smaller */
-      margin: 8px 0; /* Less spacing for mobile */
-    }
   }
-  
-  @media (max-width: 480px) {
-    .services-section {
-      padding: 10px; /* Reduce padding on smaller screens */
-    }
-  
-    .services-title-image {
-      max-width: 180px; /* Further reduce title image size */
-    }
-  
-    .camera-icon {
-      max-width: 100%; /* Scale camera image properly */
+
+  .services-list li {
+      font-size: 20px; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+      padding: 15px;
+  }
+
+  .content-container {
+      padding-top: 20px;
+  }
+
+  .camera-icon {
+      max-width: 70%;
+      margin-top: 20px;
+  }
+
+  .services-description {
+      font-size: 18px;
+  }
+
+  .services-list li {
+      font-size: 18px;
+      margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+      padding: 10px;
+      height: auto;
+  }
+
+  .services-title-image {
+      max-width: 200px;
+  }
+
+  .camera-icon {
+      max-width: 100%;
       margin-top: 15px;
-    }
-  
-    .services-description {
-      font-size: 18px; /* Smaller description text */
-    }
-  
-    .services-list li {
-      font-size: 18px; /* Make list items smaller */
-      margin: 5px 0; /* Even smaller spacing */
-    }
   }
-  
+
+  .services-description {
+      font-size: 16px;
+      margin-bottom: -20%;
+  }
+
+  .services-list li {
+      font-size: 16px;
+      margin: 5px 0;
+  }
+}

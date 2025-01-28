@@ -1,0 +1,104 @@
+.honest-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/honest/honest-background.jpeg');
+    background-size: cover;  /* Ensure the image covers the entire section */
+    background-position: center; /* Position the image at the center */
+    background-repeat: no-repeat; /* Prevent repetition */
+    overflow: hidden;
+  }
+  
+  .honest-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Darken the background */
+    z-index: 1; /* Make sure it's behind the content */
+  }
+  
+  .honest-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space the images evenly */
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .collage-left, .collage-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; /* Make sure these are above the background overlay */
+  }
+  
+  .collage-left {
+    left: 8%; /* Adjust left image closer to the left edge */
+  }
+  
+  .collage-right {
+    right: 8%; /* Adjust right image closer to the right edge */
+  }
+  
+  .collage-left img, .collage-right img {
+    width: 600px; /* Adjust size */
+    height: auto;
+  }
+  
+  .honest-image {
+    position: absolute;
+    z-index: 2; /* Make sure it's above the background overlay */
+    width: auto; /* Maintain original aspect ratio */
+    height: auto;
+    left: 50%; /* Position the center image at 50% from the left */
+    transform: translateX(-50%); /* Offset to truly center it */
+  }
+  
+  .honest-image img {
+    width: 700px; /* Adjust the width in pixels */
+    height: auto; /* Maintain original aspect ratio */
+  }
+  
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .honest-section {
+      height: 30vh; /* Adjust height for smaller screens */
+    }
+  
+    .collage-left img, .collage-right img {
+      width: 80%; /* Adjust the width of the images for smaller screens */
+      height: auto;
+    }
+  
+    .honest-image img {
+      width: 55%; /* Adjust width for smaller screens */
+    }
+  
+    .honest-container {
+      justify-content: center; /* Center the images for mobile */
+      flex-direction: row; /* Ensure images stay in a row */
+    }
+  
+    .collage-left {
+      margin-left:50%;  /* Keep left image at the far left */
+    }
+  
+    .collage-right {
+      margin-right: 50%;  /* Keep right image at the far right */
+    }
+  
+    /* Keep honest image centered */
+    .honest-image {
+      left: 50%;  /* Center the honest image */
+      transform: translateX(-50%);  /* Offset to truly center it */
+    }
+  }
+  

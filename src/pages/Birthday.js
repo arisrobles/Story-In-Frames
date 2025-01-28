@@ -51,7 +51,7 @@ const Birthday = () => {
         className={`image-wrapper ${inView[0] ? "in-view" : ""} first-image-card`}
       >
         <img
-          src={require("../assets/images/birthday/birthday1.png")}
+          src={require("../assets/images/birthday/birthday1.jpg")}
           alt="Baby Photo 1"
         />
       </div>
@@ -62,7 +62,7 @@ const Birthday = () => {
         className={`image-wrapper ${inView[1] ? "in-view" : ""}`}
       >
         <img
-          src={require("../assets/images/birthday/birthday2.png")}
+          src={require("../assets/images/birthday/birthday2.jpg")}
           alt="Baby Photo 2"
         />
       </div>
@@ -73,7 +73,7 @@ const Birthday = () => {
         className={`image-wrapper ${inView[2] ? "in-view" : ""}`}
       >
         <img
-          src={require("../assets/images/birthday/birthday3.png")}
+          src={require("../assets/images/birthday/birthday3.jpg")}
           alt="Baby Photo 3"
         />
       </div>

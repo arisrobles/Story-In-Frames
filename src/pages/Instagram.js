@@ -3,10 +3,10 @@ import "../assets/styles/Instagram.css";
 
 const Instagram = () => {
   const images = [
-    require("../assets/images/instagram/instagram1.png"),
-    require("../assets/images/instagram/instagram2.png"),
-    require("../assets/images/instagram/instagram3.png"),
-    require("../assets/images/instagram/instagram4.png"),
+    require("../assets/images/instagram/instagram1.jpg"),
+    require("../assets/images/instagram/instagram2.jpg"),
+    require("../assets/images/instagram/instagram3.jpg"),
+    require("../assets/images/instagram/instagram4.jpg"),
   ];
 
   useEffect(() => {

@@ -1,15 +1,18 @@
 .warm-moments-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d8d5c9; /* Background color */
-    padding: 20px;
-    height: 80vh;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100; /* Thin */
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/logos/page2-background.jpg);
+  background-repeat: no-repeat; /* Prevent background repetition */
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Center the background image */
+  padding: 20px;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; /* Thin */
+}
+
   .image-section {
     flex: 1;
     display: flex;
@@ -18,7 +21,7 @@
   }
   
   .camera-image {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
   }
   
@@ -34,10 +37,10 @@
     margin-bottom: 20px;
   }
   
-  .description {
-    font-size: 20px;
+  .about-description {
+    font-size: 28px;
     line-height: 1.8;
-    color: #020202;
+    color: #f6f6f6;
     margin: 10px 0;
     text-align: left;
   }
@@ -62,7 +65,7 @@
       max-width: 80%; /* Shrink images on smaller screens */
     }
   
-    .description {
+    .about-description {
       font-size: 18px; /* Adjust font size */
       text-align: center; /* Center text */
     }
@@ -78,15 +81,15 @@
       max-width: 90%; /* Adjust image size further */
     }
   
-    .description {
+    .about-description {
       font-size: 16px;
       line-height: 1.6; /* Reduce line height */
     }
   }
   
   @media (max-width: 480px) {
-    .description {
-      font-size: 14px; /* Smallest font for very small devices */
+    .about-description {
+      font-size: 12px; /* Smallest font for very small devices */
     }
   
     .hello-image {
