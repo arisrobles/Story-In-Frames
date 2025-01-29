@@ -10,7 +10,7 @@ const PrenupRates = () => {
       <div className="rates-container">
         <div className="rate-card">
           <div className="rate-icon">
-            <img src={require('../assets/images/logos/hello-image.png')} alt="Bloom Icon" />
+            <img src={require('../assets/images/pricing/bloomIcon.png')} alt="Bloom Icon" />
           </div>
           <h3 className="rate-name">BLOOM</h3>
           <ul className="rate-details">
@@ -25,7 +25,7 @@ const PrenupRates = () => {
 
         <div className="rate-card">
           <div className="rate-icon">
-            <img src={require('../assets/images/logos/hello-image.png')} alt="Lustre Icon" />
+            <img src={require('../assets/images/pricing/Lustreicon.png')} alt="Lustre Icon" />
           </div>
           <h3 className="rate-name">LUSTRE</h3>
           <ul className="rate-details">
@@ -40,7 +40,7 @@ const PrenupRates = () => {
 
         <div className="rate-card">
           <div className="rate-icon">
-            <img src={require('../assets/images/logos/hello-image.png')} alt="Aurora Icon" />
+            <img src={require('../assets/images/pricing/Aurora icon.png')} alt="Aurora Icon" />
           </div>
           <h3 className="rate-name">AURORA</h3>
           <ul className="rate-details">

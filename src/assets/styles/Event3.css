@@ -1,6 +1,6 @@
 .event3-container {
     background-color: #39472c; /* Deep green background */
-    padding: 20px; /* Add padding around the container */
+    padding: 0; /* Remove padding to eliminate any extra space */
     position: relative;
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Prevent any content from exceeding the container */
@@ -12,12 +12,14 @@
 
 .event3-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
     gap: 0; /* No gap between grid items */
     height: 80%; /* Adjust grid height for smaller screens */
-    width: 90%; /* Adjust width percentage for the grid */
+    width: 100%; /* Full width for the grid */
     align-items: center; /* Vertically center items inside the grid */
     justify-items: center; /* Horizontally center items inside the grid */
+    position: relative; /* Position for absolute leaf containers */
+    padding: 325px;
 }
 
 .event3-image {
@@ -40,23 +42,25 @@
 .event3-leaf-left-container,
 .event3-leaf-right-container {
     position: absolute;
-    top: 40%; /* Position near the top */
-    z-index: 10; /* Make sure it's on top */
+    top: 50%; /* Center leaves vertically */
+    z-index: 10; /* Ensure leaves are on top of images */
+    transform: translateY(-50%); /* Adjust position to vertically center */
 }
 
 .event3-leaf-left-container {
-    left: 2%;
+    left: -6%; /* Align left leaf with the left side */
 }
 
 .event3-leaf-right-container {
-    right: 2%;
+    right: -6%;
 }
 
 .event3-leaf-left,
 .event3-leaf-right {
-    width: 200px; /* Reduced width for smaller screens */
+    width: 500px; /* Adjust the width so that they fit within the container */
     height: auto; /* Maintain aspect ratio */
 }
+
 
 @media (max-width: 1024px) {
     .event3-container {
@@ -71,7 +75,7 @@
 
     .event3-leaf-left,
     .event3-leaf-right {
-        width: 150px; /* Smaller leaves for medium screens */
+        width: 500px; /* Smaller leaves for medium screens */
     }
 }
 
@@ -82,8 +86,9 @@
     }
 
     .event3-grid {
-        width: 85%; /* Slightly wider for smaller screens */
+        width: 75%; /* Slightly wider for smaller screens */
         height: 60%; /* Adjust grid height */
+        padding: 30px;
     }
 
     .event3-image img {
@@ -91,15 +96,15 @@
     }
 
     .event3-leaf-left-container {
-        left: 1%;
+        left: -35%;
     }
     
     .event3-leaf-right-container {
-        right: 1%;
+        right: -35%;
     }
 
     .event3-leaf-left,
     .event3-leaf-right {
-        width: 30px; /* Further reduce leaf size for smaller screens */
+        width: 300px; /* Further reduce leaf size for smaller screens */
     }
 }

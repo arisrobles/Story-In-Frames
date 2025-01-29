@@ -5,7 +5,7 @@ const photos = [
   { front: 'flip1.png', back: 'back1.jpg', alt: 'Couple', flip: true },
   { front: 'storyinframes.png', back: 'storyinframes.png', alt: 'Guitar', flip: false },
   { front: 'flip2.jpg', back: 'back2.jpg', alt: 'Mountain', flip: true },
-  { front: 'cam icon.png', back: 'cam icon.png', alt: 'Beach', flip: false },
+  { front: 'small-icon.png', back: 'small-icon.png', alt: 'Beach', flip: false },
   { front: 'wave.png', back: 'wave.png', alt: 'Sunset', flip: false },
   { front: 'flip3.jpg', back: 'back3.jpg', alt: 'Forest', flip: true },
   { front: 'CoffeeIcon.png', back: 'CoffeeIcon.png', alt: 'Sunset', flip: false },

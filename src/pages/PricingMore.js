@@ -34,7 +34,7 @@ const PricingMore = () => {
 
       <div className="pricing-more-image-section">
         <img
-          src={require('../assets/images/pricing/moon.png')}
+          src={require('../assets/images/pricing/moon.jpg')}
           alt="Event setup"
           className="pricing-more-image"
         />

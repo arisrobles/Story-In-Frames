@@ -17,11 +17,11 @@
 }
 
 .services-title-image {
-  max-width: 500px; /* Ensure the title image is not too large */
+  max-width: 300px; /* Ensure the title image is not too large */
 }
 
 .services-description {
-  font-size: 42px; /* Adjust font size for description */
+  font-size: 30px; /* Adjust font size for description */
   color: #4b401b;
   text-transform: uppercase;
 }
@@ -63,7 +63,7 @@
 }
 
 .services-list li {
-  font-size: 45px; /* Adjust font size for better readability */
+  font-size: 30px; /* Adjust font size for better readability */
   color: #4b401b;
   margin: 10px 0;
   cursor: pointer;

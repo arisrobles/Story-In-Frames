@@ -23,10 +23,10 @@ body {
   }
   
   .faqs-title {
-    font-size: 4.2rem; /* Increased title font size */
+    font-size: 3.2rem; /* Increased title font size */
     font-weight: 700;
     color: #333;
-    margin-top: 50px; /* Increased margin */
+    margin-top: 5%; /* Increased margin */
   }
   
   .highlight {
@@ -41,7 +41,7 @@ body {
     list-style-type: disc; /* Enables bullets */
     list-style-position: inside; /* Makes bullets inside the text */
     padding-left: 20px; /* Adds some space for bullets */
-    font-size: 3rem; /* Increased font size */
+    font-size: 1.8rem; /* Increased font size */
     margin-bottom: 40px; /* Added spacing below the list */
     text-align: left;
   }
@@ -51,8 +51,8 @@ body {
   }
   
   .faqs-contact {
-    font-size: 2.5rem; /* Increased title font size */
-    margin-top: 20px;
+    font-size: 1.8rem; /* Increased font size */
+    margin-top: -40px;
   }
   
   .contact-details {
@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px; /* Space between icon and text */
-    font-size: 2.5rem; /* Adjust size of text and icons */
+    font-size: 1.8rem; /* Increased font size */
   }
   
   .contact-item a {
@@ -90,9 +90,9 @@ body {
   }
   
   .thank-you-image {
-    width: 500px; /* Increased width */
+    width: 400px; /* Increased width */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 20px; /* Add spacing above the image */
+    margin-top: -50px; /* Add spacing above the image */
   }
   
   /* Responsive Design */

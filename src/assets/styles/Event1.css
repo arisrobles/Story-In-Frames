@@ -18,21 +18,22 @@
   
   .left-column img,
   .right-column img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
-  }
+      width: 100%; /* Reduce the size of the images */
+      max-width: 500px; /* Limit the maximum width */
+      height: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
+      margin: 0 auto; /* Center images within their columns */
+  }  
   
-
   .center-text .real-text {
-    font-size: 70px; /* Increase the font size of the text */
-    padding: 0 130px;
+    font-size: 50px; /* Increase the font size of the text */
     margin-top: 50px;
+    padding: 50px;
   }
   
   .authentic-text span {
     display: block;
-    font-size: 60px; /* Adjust the size of each letter */
+    font-size: 45px; /* Adjust the size of each letter */
     line-height: 1.2; /* Adjust line height to reduce space between letters */
   }
   
@@ -42,7 +43,7 @@
   }
   
   .icon img {
-    width: 200px; /* Adjust the width of the leaf icon image */
+    width: 100px; /* Adjust the width of the leaf icon image */
     height: 100%;
     object-fit: contain;
   }
@@ -50,7 +51,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .event-design {
-    height: 34vh; /* Reduce overall height */
+    height: 30vh; /* Reduce overall height */
   }
 
   .left-column img,

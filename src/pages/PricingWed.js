@@ -6,7 +6,7 @@ const PricingWed = () => {
     <div className="pricing-wed-container">
       <div className="pricing-wed-image-section">
         <img
-          src={require('../assets/images/pricing/wedding.png')} 
+          src={require('../assets/images/pricing/wedding.jpg')} 
           alt="Wedding set-up"
           className="pricing-wed-image"
         />

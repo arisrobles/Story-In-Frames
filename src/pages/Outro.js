@@ -6,7 +6,7 @@ const Outro = () => {
     <div className="outro-container">
       <div className="image-section">
         <img
-          src={require("../assets/images/events/banner.png")} // Change to the path of your uploaded image
+          src={require("../assets/images/pricing/outro.jpg")} // Change to the path of your uploaded image
           alt="Outro Background"
           className="outro-image"
         />

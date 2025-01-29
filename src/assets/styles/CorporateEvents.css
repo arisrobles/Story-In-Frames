@@ -2,6 +2,7 @@
     background-color: #2f4f4f; /* Matches the background */
     padding: 20px;
     box-sizing: border-box;
+    height: 100vh;
   }
   
   .banner-with-collage {
@@ -9,7 +10,7 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin: 20px 70px 30px 70px; /* Top, Right, Bottom, Left */
+    margin: -20px 70px 30px 70px; /* Top, Right, Bottom, Left */
   }
   
   .side-collage-container {
@@ -44,7 +45,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin: 0 70px; /* Top and Bottom: 0, Left and Right: 70px */
+    margin: -30px 70px; /* Top and Bottom: 0, Left and Right: 70px */
   }
   
   .event-image {
@@ -53,7 +54,7 @@
   
   .event-image img {
     width: 100%;
-    height: auto;
+    height: 85%;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -90,6 +91,9 @@
   }
   
   @media (max-width: 480px) {
+    .corporate-events {
+      height: auto;
+    }
     .banner-with-collage {
       gap: 5px; /* Further reduce gap */
       margin: 10px 10px; /* Minimal margins for mobile */

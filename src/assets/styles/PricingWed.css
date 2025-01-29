@@ -35,39 +35,42 @@ body {
 }
 
 .pricing-wed-title {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     color: #333;
     margin-top: 0px;
 }
 
 .pricing-wed-subtitle {
-    font-size: 5.5rem;
+    font-size: 4rem;
     color: #333;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .pricing-wed-note {
-    font-size: 24px;
-    margin-top: -85px;
+    font-size: 20px;
+    margin-top: -70px;
     color: #6c757d;
 }
 
 .pricing-wed-package-title {
-    font-size: 37px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
     color: #2d6a4f;
     margin-top: 23%;
+    margin-right: 10%;
 }
 
 .pricing-wed-features {
     list-style-type: none;
     padding-left: 0;
+    margin-right: 10%;
+    margin-top: -4%;
 }
 
 .pricing-wed-features li {
-    font-size: 2rem;
-    margin: 5px 0;
+    font-size: 1.3rem;
+    margin: px 0;
     font-weight: 400;
 }
 
@@ -76,7 +79,7 @@ body {
 }
 
 .pricing-wed-total-prices {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     margin: 5px 0;
     font-weight: 400;
     text-transform: uppercase;
@@ -84,7 +87,7 @@ body {
 
 .pricing-wed-info-container {
     position: relative;
-    height: 78vh; /* Set the height of the image container */
+    height: 76vh; /* Set the height of the image container */
     background-image: url('../images/pricing/gate.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -217,9 +220,12 @@ body {
     .pricing-wed-features li {
         font-size: 5px;
         margin-left: -30%;
-        line-height: 4px;
+        line-height: 6px;
     }
 
+    .pricing-wed-features {
+        margin-top: 15%;
+    }
     .pricing-wed-total-prices {
         font-size: 5px;
         margin-left: -30%;

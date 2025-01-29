@@ -6,8 +6,8 @@ const Event1 = () => {
     <div className="event-design">
       {/* Left Column */}
       <div className="left-column">
-        <img src={require('../assets/images/events/event8.png')} alt="Top Left" />
-        <img src={require('../assets/images/events/event9.png')} alt="Bottom Left" />
+        <img src={require('../assets/images/events/event8.jpg')} alt="Top Left" />
+        <img src={require('../assets/images/events/event9.jpg')} alt="Bottom Left" />
       </div>
 
       {/* Center Text */}
@@ -31,8 +31,8 @@ const Event1 = () => {
 
       {/* Right Column */}
       <div className="right-column">
-        <img src={require('../assets/images/events/event10.png')} alt="Top Right" />
-        <img src={require('../assets/images/events/event11.png')} alt="Bottom Right" />
+        <img src={require('../assets/images/events/event10.jpg')} alt="Top Right" />
+        <img src={require('../assets/images/events/event11.jpg')} alt="Bottom Right" />
       </div>
     </div>
   );

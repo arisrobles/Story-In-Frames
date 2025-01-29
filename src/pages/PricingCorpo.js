@@ -6,7 +6,7 @@ const PricingCorpo = () => {
     <div className="pricing-corpo-container">
       <div className="pricing-corpo-image-section">
         <img
-          src={require("../assets/images/events/event3-4.png")}
+          src={require("../assets/images/pricing/background.jpg")}
           alt="Corporate Event"
           className="pricing-corpo-image"
         />

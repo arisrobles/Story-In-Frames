@@ -3,7 +3,7 @@ import '../assets/styles/GallerySection.css'; // Include CSS for the styles
 
 const photos = [
   { front: 'frontflip1.jpg', back: 'backflip1.jpg', alt: 'Couple', flip: true },
-  { front: 'cam icon.png', back: 'cam icon.png', alt: 'Beach', flip: false },
+  { front: 'small-icon.png', back: 'small-icon.png', alt: 'Beach', flip: false },
   { front: 'frontflip2.jpg', back: 'backflip2.jpg', alt: 'Mountain', flip: true },
   { front: 'wave.png', back: 'wave.png', alt: 'Beach', flip: false },
   { front: 'storyinframes.png', back: 'cam icon.png', alt: 'Beach', flip: false },

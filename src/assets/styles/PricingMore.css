@@ -38,25 +38,26 @@ body {
 }
 
 .pricing-more-wed-title {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     color: #333;
     margin-top: 0px;
 }
 
 .pricing-more-other-subtitle {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: #333;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
 .pricing-more-features {
     list-style-type: none;
     padding-left: 0;
-    margin-top: 15%;
+    margin-top: 10%;
+    margin-left: -5%;
 }
 
 .pricing-more-features li {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     margin: 5px 0;
     font-weight: 400;
 }
@@ -66,16 +67,17 @@ body {
 }
 
 .pricing-more-total-price {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     margin: 5px 0;
     font-weight: 400;
     text-transform: uppercase;
+    margin-left: -5%;
 }
 
 .pricing-more-infos-container {
     position: relative;
     height: 78vh; /* Set the height of the image container */
-    background-image: url('../images/pricing/cricle.png');
+    background-image: url('../images/pricing/circle.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -173,13 +175,16 @@ body {
         margin-top: -6%;
     }
 
+    .pricing-more-features {
+        margin-top: 20%;
+    }
     .pricing-more-features li {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         margin-left: -30%;
     }
 
     .pricing-more-total-price {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         margin-left: -30%;
         margin-top: -15px;
     }

@@ -48,7 +48,7 @@
   }
   
   .collage-left img, .collage-right img {
-    width: 600px; /* Adjust size */
+    width: 400px; /* Adjust size */
     height: auto;
   }
   
@@ -62,7 +62,7 @@
   }
   
   .honest-image img {
-    width: 700px; /* Adjust the width in pixels */
+    width: 600px; /* Adjust the width in pixels */
     height: auto; /* Maintain original aspect ratio */
   }
   

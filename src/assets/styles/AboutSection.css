@@ -32,13 +32,13 @@
   }
   
   .hello-image {
-    max-width: 700px; /* Adjust size */
+    max-width: 500px; /* Adjust size */
     height: auto;
-    margin-bottom: 20px;
+
   }
   
   .about-description {
-    font-size: 28px;
+    font-size: 18px;
     line-height: 1.8;
     color: #f6f6f6;
     margin: 10px 0;

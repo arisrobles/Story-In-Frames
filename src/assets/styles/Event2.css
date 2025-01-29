@@ -6,7 +6,7 @@
 /* Main banner styles */
 .event-banner {
   position: relative;
-  background-image: url('../images/events/banner.png'); /* Replace with your banner image URL */
+  background-image: url('../images/events/background.jpg'); /* Replace with your banner image URL */
   background-size: cover;
   background-position: center;
   height: 600px; /* Default height */

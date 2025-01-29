@@ -48,7 +48,7 @@ const CorporateEvents = () => {
         <div className="central-banner-container">
           <div className="central-banner">
             <img
-              src={require('../assets/images/events/banner.png')}
+              src={require('../assets/images/events/banner.jpg')}
               alt="Congratulations Banner"
             />
           </div>

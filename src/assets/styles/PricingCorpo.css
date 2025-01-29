@@ -46,22 +46,22 @@ body {
 }
 
 .pricing-corpo-rates-title {
-  font-size: 3.7rem;
+  font-size: 3rem;
   margin-bottom: -4%;
 }
 
 .pricing-corpo-event-type {
-  font-size: 5.2rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
 .pricing-corpo-features-list {
   list-style-type: none;
   padding: 0;
-  font-size: 3.3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin: 20px 0;
-  line-height: 4.5rem;
+  line-height: 2.5rem;
 }
 
 .pricing-corpo-features-list li {
@@ -69,10 +69,10 @@ body {
 }
 
 .pricing-corpo-total-price {
-  font-size: 3.3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-top: 10px;
-  line-height: 4.5rem;
+  line-height: 2.5rem;
   text-transform: uppercase;
 }
 

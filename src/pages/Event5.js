@@ -6,7 +6,7 @@ const Event5 = () => {
     <div className="event-design">
       {/* Left Column */}
       <div className="left-column">
-        <img src={require('../assets/images/events/event5-1.png')} alt="Top Left" />
+        <img src={require('../assets/images/events/event5-1.jpg')} alt="Top Left" />
         <img src={require('../assets/images/events/event5-2.png')} alt="Bottom Left" />
       </div>
 
@@ -30,7 +30,7 @@ const Event5 = () => {
       {/* Right Column */}
       <div className="right-column">
         <img src={require('../assets/images/events/event5-3.png')} alt="Top Right" />
-        <img src={require('../assets/images/events/event5-4.png')} alt="Bottom Right" />
+        <img src={require('../assets/images/events/event5-4.jpg')} alt="Bottom Right" />
       </div>
     </div>
   );
