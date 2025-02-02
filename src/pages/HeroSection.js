@@ -15,7 +15,7 @@ const HeroSection = () => {
         <a href="#gallery" className="nav-link">GALLERY</a>
         <a href="#packages" className="nav-link">PACKAGES</a>
         <a href="#booking" className="nav-link">BOOKING</a>
-        <a href="#booking" className="nav-link">FAQS</a>
+        <a href="#testimonials" className="nav-link">TESTIMONIALS</a>
       </nav>
       <div className="decorative-border"></div>
       <div className="decorative-image">

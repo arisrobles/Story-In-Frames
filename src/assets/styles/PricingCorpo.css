@@ -1,9 +1,9 @@
 /* Prevent horizontal scrolling */
 body {
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
-  box-sizing: border-box; /* Prevent content overflow due to padding and borders */
+  overflow-x: hidden; 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
 
 /* Main container style */
@@ -13,13 +13,15 @@ body {
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
-  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+  box-sizing: border-box; 
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for main container */
 }
 
 .pricing-corpo-image-section {
   width: 100%;
   height: 100%;
-  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+  box-sizing: border-box; 
+  animation: fadeIn 2s ease-in-out; /* Fade-in effect for image section */
 }
 
 .pricing-corpo-image {
@@ -42,17 +44,20 @@ body {
   color: #ffffff;
   text-align: center;
   padding: 20px;
-  box-sizing: border-box; /* Include padding/borders within width/height calculations */
+  box-sizing: border-box; 
+  animation: fadeInUp 2s ease-out 0.5s; /* Fade and slide-up effect for overlay */
 }
 
 .pricing-corpo-rates-title {
   font-size: 3rem;
   margin-bottom: -4%;
+  animation: fadeInUp 1.5s ease-out 1s; /* Fade and slide-up effect for rates title */
 }
 
 .pricing-corpo-event-type {
   font-size: 4rem;
   margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-out 1.3s; /* Fade and slide-up effect for event type */
 }
 
 .pricing-corpo-features-list {
@@ -62,6 +67,7 @@ body {
   font-weight: 400;
   margin: 20px 0;
   line-height: 2.5rem;
+  animation: fadeInUp 2s ease-out 1.6s; /* Fade and slide-up effect for features list */
 }
 
 .pricing-corpo-features-list li {
@@ -74,6 +80,29 @@ body {
   margin-top: 10px;
   line-height: 2.5rem;
   text-transform: uppercase;
+  animation: fadeInUp 2s ease-out 2s; /* Fade and slide-up effect for total price */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -115,8 +144,8 @@ body {
 
 @media (max-width: 600px) {
   .pricing-corpo-container {
-    height: auto; /* Allow height to adjust based on content */
-    overflow-x: hidden; /* Explicitly prevent horizontal scrolling */
+    height: auto;
+    overflow-x: hidden; 
   }
 
   .pricing-corpo-rates-title {

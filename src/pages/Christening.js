@@ -33,7 +33,7 @@ const Christening = () => {
 
   return (
     <>
-      <section className="christening-container">
+      <section id="christening" className="christening-container">
         <img
           src={christeningImage}
           alt="Christening Invitation"

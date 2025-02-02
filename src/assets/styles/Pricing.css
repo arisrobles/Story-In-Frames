@@ -34,11 +34,20 @@
 
 .rate-card {
   background-color: #94a571;
-  width: 300px; /* Reduced width */
+  width: 300px;
   text-align: center;
   flex: 1;
-  max-width: 400px; /* Ensures consistent size */
-  padding: 20px; /* Adjusted padding inside cards */
+  max-width: 400px;
+  padding: 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially shifted down */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+/* Visible class is added by Intersection Observer */
+.rate-card.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset position */
 }
 
 .rate-icon img {

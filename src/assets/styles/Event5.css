@@ -1,56 +1,71 @@
 .event5-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f8f8f8; /* Adjust the background as needed */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100; /* Thin */
-  }
-  
-  .left-section, .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .center-section {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #4f4f4f;
-    color: white;
-    padding: 20px;
-  }
-  
-  .center-section h1 {
-    margin: 10px 0;
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-  }
-  
-  .divider-icon img {
-    width: 40px; /* Adjust the size of the icon */
-    height: auto;
-  }
-  
-  .baby-photos img,
-  .group-photos img,
-  .family-photos img,
-  .portrait-photos img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional for rounded edges */
-  }
-  
-  .group-photos, .portrait-photos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; 
+}
+
+.left-section, .right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.center-section {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #4f4f4f;
+  color: white;
+  padding: 20px;
+}
+
+.center-section h1 {
+  margin: 10px 0;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.divider-icon img {
+  width: 40px;
+  height: auto;
+}
+
+.baby-photos img,
+.group-photos img,
+.family-photos img,
+.portrait-photos img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.group-photos, .portrait-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.event-design .visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.event-design .left-column, .event-design .right-column, .event-design .center-text {
+  opacity: 0;
+  transform: translateY(50px); /* Initial position off-screen */
+}
+
+.event-design .left-column.visible, .event-design .right-column.visible, .event-design .center-text.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to the final position */
+}

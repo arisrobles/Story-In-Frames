@@ -33,7 +33,7 @@ const BirthdaySection = () => {
   }, []);
 
   return (
-    <div className="image-layout">
+    <div id='birthday' className="image-layout">
       <div className="single-image" ref={singleImageRef}>
         <img
           src={require('../assets/images/birthday/birthday4.jpg')} // Replace with the actual filename

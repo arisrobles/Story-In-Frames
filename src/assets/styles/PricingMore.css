@@ -1,52 +1,57 @@
 /* Prevent horizontal scrolling */
 body {
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 /* Main container style */
 .pricing-more-container {
     display: flex;
-    flex-direction: row; /* Keeps the image on the right */
+    flex-direction: row; 
     justify-content: space-between;
     align-items: flex-start;
     background-color: #e0f7e8;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    width: 100%; /* Ensure it takes up 100% of the available width */
-    overflow: hidden; /* Prevent overflow */
+    width: 100%;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
 }
 
 .pricing-more-image-section {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    overflow: hidden; /* Prevent image section from overflowing */
+    overflow: hidden;
+    animation: slideInFromLeft 1.5s ease-in-out; /* Slide-in animation from left */
 }
 
 .pricing-more-image {
     width: 100%;
     height: 100vh;
-    object-fit: cover; /* Ensures the image fits within its container */
+    object-fit: cover;
 }
 
 .pricing-more-details-section {
     flex: 1;
     padding-left: 20px;
     position: relative;
-    overflow: hidden; /* Prevent overflow in the details section */
+    overflow: hidden;
+    animation: slideInFromRight 1.5s ease-in-out; /* Slide-in animation from right */
 }
 
 .pricing-more-wed-title {
     font-size: 2.5rem;
     color: #333;
     margin-top: 0px;
+    animation: fadeInUp 1s ease-out; /* Fade and slide-up effect */
 }
 
 .pricing-more-other-subtitle {
     font-size: 1.5rem;
     color: #333;
     margin-top: -30px;
+    animation: fadeInUp 1.3s ease-out 0.3s; /* Fade and slide-up effect with delay */
 }
 
 .pricing-more-features {
@@ -54,6 +59,7 @@ body {
     padding-left: 0;
     margin-top: 10%;
     margin-left: -5%;
+    animation: fadeInUp 1.5s ease-out 0.5s; /* Fade in with delay */
 }
 
 .pricing-more-features li {
@@ -64,6 +70,7 @@ body {
 
 .pricing-more-summary {
     margin-top: 20px;
+    animation: fadeInUp 1.8s ease-out 0.8s;
 }
 
 .pricing-more-total-price {
@@ -72,15 +79,17 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     margin-left: -5%;
+    animation: fadeInUp 2s ease-out 1s;
 }
 
 .pricing-more-infos-container {
     position: relative;
-    height: 78vh; /* Set the height of the image container */
+    height: 78vh;
     background-image: url('../images/pricing/circle.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    animation: fadeIn 1.5s ease-in-out 0.8s;
 }
 
 .pricing-more-infos {
@@ -90,13 +99,55 @@ body {
     width: 100%;
     padding: 30px;
     color: rgb(20, 20, 20);
-    z-index: 1; /* Ensures the text is on top of the background image */
+    z-index: 1;
+}
+
+/* Animation for fading in elements */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding in from left */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation for sliding in from right */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation for fading and sliding up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
     .pricing-more-image {
-        height: 85vh; /* Decrease image height */
+        height: 85vh;
     }
 
     .pricing-more-details-section {
@@ -122,7 +173,7 @@ body {
 
 @media (max-width: 900px) {
     .pricing-more-image {
-        height: 75vh; /* Decrease image height further */
+        height: 75vh;
     }
 
     .pricing-more-details-section {
@@ -152,7 +203,7 @@ body {
     }
 
     .pricing-more-image {
-        height: 37vh; /* Further decrease image height */
+        height: 37vh;
     }
 
     .pricing-more-details-section {
@@ -161,7 +212,7 @@ body {
 
     .pricing-more-infos-container {
         position: relative;
-        height: 37vh; /* Set the height of the image container */
+        height: 37vh;
         margin-top: -13%;
     }
 
@@ -178,6 +229,7 @@ body {
     .pricing-more-features {
         margin-top: 20%;
     }
+
     .pricing-more-features li {
         font-size: 0.4rem;
         margin-left: -30%;

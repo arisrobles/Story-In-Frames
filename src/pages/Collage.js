@@ -5,7 +5,7 @@ const Collage = () => {
   const images = [
     { id: 1, src: require('../assets/images/collage/main-image.jpg'), alt: 'Image 1', type: 'portrait' },
     { id: 2, src: require('../assets/images/collage/collage1.jpg'), alt: 'Image 2', type: 'portrait' },
-    { id: 3, src: require('../assets/images/collage/collage2.jpeg'), alt: 'Image 3', type: 'portrait' },
+    { id: 3, src: require('../assets/images/collage/collage2.jpg'), alt: 'Image 3', type: 'portrait' },
     { id: 4, src: require('../assets/images/collage/collage3.jpg'), alt: 'Image 4', type: 'landscape' },
     { id: 5, src: require('../assets/images/collage/landscape-collage.jpg'), alt: 'Image 5', type: 'landscape' },
     { id: 6, src: require('../assets/images/collage/landscape-collage2.jpg'), alt: 'Image 6', type: 'landscape' },
@@ -44,8 +44,22 @@ const Collage = () => {
     };
   }, []);
 
+  // Automatic image change every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage(prevImage => {
+        const currentIndex = images.findIndex(image => image.src === prevImage);
+        const nextIndex = (currentIndex + 1) % images.length; // Loop back to the start
+        return images[nextIndex].src;
+      });
+    }, 3000); // 3 seconds
+
+    // Clear interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="gallery-container">
+    <div id='pre-debut' className="gallery-container">
       {/* Main Image */}
       <div className="main-image-container">
         <img src={currentImage} alt="Main" className="main-image" />

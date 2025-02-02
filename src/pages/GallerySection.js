@@ -37,7 +37,7 @@ const GallerySection = () => {
   }, []);
 
   return (
-    <div id="gallery" className="story-container">
+    <div id="prenup" className="story-container">
       <div className="photo-grid">
         {photos.map((photo, index) => (
           <div
