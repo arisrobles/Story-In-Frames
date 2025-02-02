@@ -1,115 +1,140 @@
 .corporate-events {
-    background-color: #2f4f4f; /* Matches the background */
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100vh;
-  }
-  
+  background-color: #2f4f4f; /* Matches the background */
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.banner-with-collage,
+.side-collage-container,
+.central-banner-container,
+.image-collage-below {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.banner-with-collage.visible,
+.side-collage-container.visible,
+.central-banner-container.visible,
+.image-collage-below.visible {
+  opacity: 1; /* Show content when it becomes visible */
+  transform: translateY(0); /* Move the content into place */
+}
+
+.banner-with-collage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: -20px 70px 30px 70px; /* Top, Right, Bottom, Left */
+}
+
+.side-collage-container {
+  flex: 1;
+}
+
+.side-collage {
+  width: 100%;
+}
+
+.side-collage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.central-banner-container {
+  flex: 2;
+  position: relative;
+  text-align: center;
+}
+
+.central-banner img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image-collage-below {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: -30px 70px; /* Top and Bottom: 0, Left and Right: 70px */
+}
+
+.event-image {
+  width: calc(20% - 20px); /* Ensure equal size for event images */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.event-image.visible {
+  opacity: 1; /* Show image when it becomes visible */
+  transform: translateY(0); /* Move the image into place */
+}
+
+.event-image img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
   .banner-with-collage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin: -20px 70px 30px 70px; /* Top, Right, Bottom, Left */
-  }
-  
-  .side-collage-container {
-    flex: 1;
-  }
-  
-  .side-collage {
-    width: 100%;
-  }
-  
-  .side-collage img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .central-banner-container {
-    flex: 2;
-    position: relative;
-    text-align: center;
-  }
-  
-  .central-banner img {
-    width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  
-  .image-collage-below {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: -30px 70px; /* Top and Bottom: 0, Left and Right: 70px */
-  }
-  
-  .event-image {
-    width: calc(20% - 20px); /* Ensure equal size for event images */
-  }
-  
-  .event-image img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 1024px) {
-    .banner-with-collage {
       gap: 30px; /* Reduce gap between sections */
       margin: 20px 40px; /* Adjust margins for medium-sized screens */
-    }
-  
-    .image-collage-below {
-      margin: 0 40px; /* Adjust margins for medium-sized screens */
-    }
-  
-    .event-image {
-      width: calc(25% - 15px); /* Slightly increase the width for better layout */
-    }
   }
-  
-  @media (max-width: 768px) {
-    .banner-with-collage {
+
+  .image-collage-below {
+      margin: 0 40px; /* Adjust margins for medium-sized screens */
+  }
+
+  .event-image {
+      width: calc(25% - 15px); /* Slightly increase the width for better layout */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-with-collage {
       gap: 20px; /* Reduce gap further */
       margin: 15px 20px; /* Adjust margins for smaller screens */
-    }
-  
-    .image-collage-below {
-      margin: 0 20px; /* Adjust margins for smaller screens */
-    }
-  
-    .event-image {
-      width: calc(33.33% - 10px); /* Make images wider */
-    }
   }
-  
-  @media (max-width: 480px) {
-    .corporate-events {
+
+  .image-collage-below {
+      margin: 0 20px; /* Adjust margins for smaller screens */
+  }
+
+  .event-image {
+      width: calc(33.33% - 10px); /* Make images wider */
+  }
+}
+
+@media (max-width: 480px) {
+  .corporate-events {
       height: auto;
-    }
-    .banner-with-collage {
+  }
+
+  .banner-with-collage {
       gap: 5px; /* Further reduce gap */
       margin: 10px 10px; /* Minimal margins for mobile */
-    }
-  
-    .image-collage-below {
+  }
+
+  .image-collage-below {
       margin: 0px; /* Minimal margins for mobile */
       gap: 5px;
-    }
-  
-    .event-image {
-      width: calc(21% - 10px); /* Adjust image size for better fit on small screens */
-    }
-
-    .corporate-events {
-      padding: 0;
-    }
   }
-  
+
+  .event-image {
+      width: calc(21% - 10px); /* Adjust image size for better fit on small screens */
+  }
+
+  .corporate-events {
+      padding: 0;
+  }
+}

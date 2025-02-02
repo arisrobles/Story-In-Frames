@@ -19,16 +19,19 @@ const CorporateEvents = () => {
       threshold: 0.5, // Trigger when 50% of the element is visible
     });
 
-    // Observe each event image
-    const images = document.querySelectorAll('.event-image');
-    images.forEach(image => {
-      observer.observe(image);
+    // Observe each element for visibility detection
+    const elementsToAnimate = document.querySelectorAll(
+      '.banner-with-collage, .side-collage-container, .central-banner-container, .image-collage-below, .event-image'
+    );
+
+    elementsToAnimate.forEach(element => {
+      observer.observe(element);
     });
 
     // Cleanup observer on component unmount
     return () => {
-      images.forEach(image => {
-        observer.unobserve(image);
+      elementsToAnimate.forEach(element => {
+        observer.unobserve(element);
       });
     };
   }, []);

@@ -14,6 +14,14 @@ body {
     font-weight: 100;
     width: 100%; /* Ensure it takes up 100% of the available width */
     overflow: hidden; /* Prevent overflow */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Initially positioned slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.pricing-wed-container.visible {
+    opacity: 1; /* Fade in the container */
+    transform: translateY(0); /* Slide up the container */
 }
 
 .pricing-wed-image-section {
@@ -25,6 +33,14 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: cover; /* This ensures the image fits within its container without causing overflow */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Initially positioned slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.pricing-wed-image.visible {
+    opacity: 1; /* Fade in the image */
+    transform: translateY(0); /* Slide up the image */
 }
 
 .pricing-wed-details-section {
@@ -32,6 +48,14 @@ body {
     padding-left: 20px;
     position: relative;
     overflow: hidden; /* Prevent overflow in the details section */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Initially positioned slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.pricing-wed-details-section.visible {
+    opacity: 1; /* Fade in the details section */
+    transform: translateY(0); /* Slide up the details section */
 }
 
 .pricing-wed-title {
@@ -102,6 +126,28 @@ body {
     padding: 30px;
     color: rgb(20, 20, 20);
     z-index: 1; /* Ensures the text is on top of the background image */
+}
+
+/* Other element styles */
+.pricing-wed-title,
+.pricing-wed-subtitle,
+.pricing-wed-note,
+.pricing-wed-package-title,
+.pricing-wed-features li,
+.pricing-wed-total-prices {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially positioned slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.pricing-wed-title.visible,
+.pricing-wed-subtitle.visible,
+.pricing-wed-note.visible,
+.pricing-wed-package-title.visible,
+.pricing-wed-features li.visible,
+.pricing-wed-total-prices.visible {
+    opacity: 1; /* Fade in the elements */
+    transform: translateY(0); /* Slide up the elements */
 }
 
 /* Responsive Design */

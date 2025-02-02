@@ -1,53 +1,112 @@
 .event-design {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1c1c1c; /* Dark background color */
-    height: 100vh;
-    padding: 20px;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100; /* Thin */
-  }
-  
-  .left-column,
-  .right-column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .left-column img,
-  .right-column img {
-      width: 100%; /* Reduce the size of the images */
-      max-width: 500px; /* Limit the maximum width */
-      height: auto;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
-      margin: 0 auto; /* Center images within their columns */
-  }  
-  
-  .center-text .real-text {
-    font-size: 50px; /* Increase the font size of the text */
-    margin-top: 50px;
-    padding: 50px;
-  }
-  
-  .authentic-text span {
-    display: block;
-    font-size: 45px; /* Adjust the size of each letter */
-    line-height: 1.2; /* Adjust line height to reduce space between letters */
-  }
-  
-  .icon {
-    margin: 10px 0; /* Space for the icon */
-    font-size: 36px; /* Adjust icon size */
-  }
-  
-  .icon img {
-    width: 100px; /* Adjust the width of the leaf icon image */
-    height: 100%;
-    object-fit: contain;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c; /* Dark background color */
+  height: 100vh;
+  padding: 20px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; /* Thin */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.event-design.visible {
+  opacity: 1; /* Fade in the section */
+  transform: translateY(0); /* Slide up the section */
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.left-column.visible,
+.right-column.visible {
+  opacity: 1; /* Fade in the columns */
+  transform: translateY(0); /* Slide up the columns */
+}
+
+.left-column img,
+.right-column img {
+  width: 100%; /* Reduce the size of the images */
+  max-width: 500px; /* Limit the maximum width */
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
+  margin: 0 auto; /* Center images within their columns */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.left-column img.visible,
+.right-column img.visible {
+  opacity: 1; /* Fade in the images */
+  transform: translateY(0); /* Slide up the images */
+}
+
+.center-text {
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.center-text.visible {
+  opacity: 1; /* Fade in the text */
+  transform: translateY(0); /* Slide up the text */
+}
+
+.center-text .real-text {
+  font-size: 50px; /* Increase the font size of the text */
+  margin-top: 50px;
+  padding: 50px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.center-text .real-text.visible {
+  opacity: 1; /* Fade in the text */
+  transform: translateY(0); /* Slide up the text */
+}
+
+.authentic-text span {
+  display: block;
+  font-size: 45px; /* Adjust the size of each letter */
+  line-height: 1.2; /* Adjust line height to reduce space between letters */
+}
+
+.icon {
+  margin: 10px 0; /* Space for the icon */
+  font-size: 36px; /* Adjust icon size */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.icon img {
+  width: 100px; /* Adjust the width of the leaf icon image */
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Smooth transition for scale effect */
+}
+
+.icon:hover img {
+  transform: scale(1.2); /* Slight scale-up effect on hover */
+}
+
+.icon.visible {
+  opacity: 1; /* Fade in the icon */
+  transform: translateY(0); /* Slide up the icon */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .event-design {

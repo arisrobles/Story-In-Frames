@@ -20,13 +20,29 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
   }
+
+  .faqs-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }  
   
   .faqs-title {
     font-size: 3.2rem; /* Increased title font size */
     font-weight: 700;
     color: #333;
     margin-top: 5%; /* Increased margin */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .faqs-title.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .highlight {
@@ -44,6 +60,14 @@ body {
     font-size: 1.8rem; /* Increased font size */
     margin-bottom: 40px; /* Added spacing below the list */
     text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .faqs-list.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .faqs-item {
@@ -53,6 +77,9 @@ body {
   .faqs-contact {
     font-size: 1.8rem; /* Increased font size */
     margin-top: -40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
   }
   
   .contact-details {
@@ -60,6 +87,11 @@ body {
     justify-content: center;
     gap: 40px; /* Increased gap for better spacing between contact methods */
     margin-top: 20px;
+  }
+
+  .faqs-contact.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .contact-item {
@@ -93,6 +125,14 @@ body {
     width: 400px; /* Increased width */
     height: auto; /* Maintain aspect ratio */
     margin-top: -50px; /* Add spacing above the image */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .thank-you-image.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   /* Responsive Design */

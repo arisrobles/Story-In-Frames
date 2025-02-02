@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../assets/styles/Pricing.css'; // Import the CSS file for styles
 
 const PrenupRates = () => {
+  useEffect(() => {
+    // Function to handle visibility detection
+    const handleIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+        // If the element is intersecting (entering the viewport), trigger animation
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Add the visible class
+        } else {
+          entry.target.classList.remove('visible'); // Remove the visible class when out of view
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    });
+
+    // Observe each element for visibility detection
+    const elementsToAnimate = document.querySelectorAll(
+      '.prenup-container, .rates-container, .rate-card'
+    );
+
+    elementsToAnimate.forEach(element => {
+      observer.observe(element);
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      elementsToAnimate.forEach(element => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <div id='packages' className="prenup-container">
       <h2 className="title">RATES AS OF 2025-2026</h2>

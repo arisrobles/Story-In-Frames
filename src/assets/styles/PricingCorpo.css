@@ -14,6 +14,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   box-sizing: border-box; /* Include padding/borders within width/height calculations */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.pricing-corpo-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pricing-corpo-image-section {
@@ -26,6 +34,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.pricing-corpo-image.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pricing-corpo-details-overlay {
@@ -43,6 +59,14 @@ body {
   text-align: center;
   padding: 20px;
   box-sizing: border-box; /* Include padding/borders within width/height calculations */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.pricing-corpo-details-overlay.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pricing-corpo-rates-title {
@@ -74,6 +98,23 @@ body {
   margin-top: 10px;
   line-height: 2.5rem;
   text-transform: uppercase;
+}
+
+.pricing-corpo-rates-title,
+.pricing-corpo-event-type,
+.pricing-corpo-features-list li,
+.pricing-corpo-total-price {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.pricing-corpo-rates-title.visible,
+.pricing-corpo-event-type.visible,
+.pricing-corpo-features-list li.visible,
+.pricing-corpo-total-price.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive Design */

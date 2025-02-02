@@ -71,8 +71,11 @@ const Testimonials = () => {
         ))}
       </div>
       <div className="testimonials-cta">
-        <p>Ready to make your event unforgettable? <span className="cta-highlight">Contact us today!</span></p>
-      </div>
+      <p>
+        Ready to make your event unforgettable?{' '}
+        <a href="#booking" className="cta-highlight">Contact us today!</a>
+      </p>
+    </div>
     </div>
   );
 };

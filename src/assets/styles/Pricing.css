@@ -1,3 +1,4 @@
+/* General container styles */
 .prenup-container {
   background-color: #94a571; /* Light green background */
   padding: 30px;
@@ -5,8 +6,17 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 100; /* Thin */
   height: 100vh; /* Adjusted height for responsiveness */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Initially positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
 }
 
+.prenup-container.visible {
+  opacity: 1; /* Fade in the container */
+  transform: translateY(0); /* Slide up the container */
+}
+
+/* Title and subtitle styles */
 .title {
   font-size: 2.5rem; /* Slightly smaller font size */
   color: #333;
@@ -25,13 +35,23 @@
   margin-top: -40px;
 }
 
+/* Rates container */
 .rates-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px; /* Adjust gap between cards */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
 }
 
+.rates-container.visible {
+  opacity: 1; /* Fade in the container */
+  transform: translateY(0); /* Slide up the container */
+}
+
+/* Rate card styles */
 .rate-card {
   background-color: #94a571;
   width: 300px; /* Reduced width */
@@ -39,6 +59,14 @@
   flex: 1;
   max-width: 400px; /* Ensures consistent size */
   padding: 20px; /* Adjusted padding inside cards */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.rate-card.visible {
+  opacity: 1; /* Fade in the card */
+  transform: translateY(0); /* Slide up the card */
 }
 
 .rate-icon img {
@@ -114,13 +142,13 @@
     color: #333;
     margin-top: 10px;
   }
-  
+
   .subtitle {
     font-size: 2rem; /* Reduced title font size */
     color: #333;
     margin-top: -15px;
   }
-  
+
   .subsub {
     font-size: 1rem; /* Adjusted font size */
     color: #333;

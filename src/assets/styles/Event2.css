@@ -15,6 +15,14 @@
   align-items: center;
   flex-direction: column;
   height: 100vh; /* Full height on larger screens */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Initially positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.event-banner.visible {
+  opacity: 1; /* Fade in the banner */
+  transform: translateY(0); /* Slide up the banner */
 }
 
 /* Overlay on top of the banner */
@@ -38,12 +46,28 @@
   left: 0;
   right: 0;
   z-index: 1; /* Ensure grid is above the overlay */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.event-grid.visible {
+  opacity: 1; /* Fade in the grid */
+  transform: translateY(0); /* Slide up the grid */
 }
 
 .grid-item {
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Positioned slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.grid-item.visible {
+  opacity: 1; /* Fade in the grid items */
+  transform: translateY(0); /* Slide up the grid items */
 }
 
 .grid-item img {
