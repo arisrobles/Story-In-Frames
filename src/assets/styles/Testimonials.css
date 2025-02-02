@@ -5,7 +5,6 @@
     padding: 50px 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    animation: fadeIn 1.5s ease-out; /* Fade-in effect for the entire section */
 }
 
 .testimonials-title {
@@ -13,7 +12,6 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out 0.5s; /* Fade-in and slide-up effect for the title */
 }
 
 .testimonials-subtitle {
@@ -21,7 +19,6 @@
     color: #555;
     margin-bottom: 40px;
     font-weight: bold;
-    animation: fadeInUp 1.5s ease-out 1s; /* Fade-in and slide-up effect for the subtitle */
 }
 
 .highlight {
@@ -36,7 +33,6 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0;
-    animation: fadeInUp 1.5s ease-out 1.5s; /* Fade-in effect for the carousel */
 }
 
 .testimonials-carousel::-webkit-scrollbar {
@@ -54,13 +50,6 @@
     max-width: 300px;
     margin: 0 auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0; /* Start with hidden card */
-    animation: fadeInUp 1.5s ease-out forwards; /* Fade-in and slide-up effect for cards */
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px); /* Slight upward movement on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .testimonial-header {
@@ -135,34 +124,11 @@
     font-size: 1.6rem;
     font-weight: bold;
     color: #333;
-    animation: fadeInUp 1s ease-out 2s; /* Fade-in effect for the CTA */
 }
 
 .cta-highlight {
     color: #52684f;
     text-decoration: underline;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Fade and slide-up animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responsive Design */
@@ -236,3 +202,4 @@
         color: #52684f;
     }
 }
+

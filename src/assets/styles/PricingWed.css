@@ -1,6 +1,6 @@
 /* Prevent horizontal scrolling */
 body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Main container style */
@@ -12,50 +12,44 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    width: 100%;
-    overflow: hidden;
-    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+    width: 100%; /* Ensure it takes up 100% of the available width */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .pricing-wed-image-section {
     flex: 1;
-    overflow: hidden;
-    animation: slideInFromLeft 1.5s ease-in-out; /* Slide-in animation from left */
+    overflow: hidden; /* Ensure the image section does not overflow */
 }
 
 .pricing-wed-image {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: cover; /* This ensures the image fits within its container without causing overflow */
 }
 
 .pricing-wed-details-section {
     flex: 1;
     padding-left: 20px;
     position: relative;
-    overflow: hidden;
-    animation: slideInFromRight 1.5s ease-in-out; /* Slide-in animation from right */
+    overflow: hidden; /* Prevent overflow in the details section */
 }
 
 .pricing-wed-title {
     font-size: 2.5rem;
     color: #333;
     margin-top: 0px;
-    animation: fadeInUp 1s ease-out; /* Fade and slide-up effect */
 }
 
 .pricing-wed-subtitle {
     font-size: 4rem;
     color: #333;
     margin-top: -50px;
-    animation: fadeInUp 1.5s ease-out 0.3s; /* Fade and slide-up effect with delay */
 }
 
 .pricing-wed-note {
     font-size: 20px;
     margin-top: -70px;
     color: #6c757d;
-    animation: fadeInUp 1.7s ease-out 0.5s;
 }
 
 .pricing-wed-package-title {
@@ -65,7 +59,6 @@ body {
     color: #2d6a4f;
     margin-top: 23%;
     margin-right: 10%;
-    animation: fadeInUp 2s ease-out 0.8s;
 }
 
 .pricing-wed-features {
@@ -73,7 +66,6 @@ body {
     padding-left: 0;
     margin-right: 10%;
     margin-top: -4%;
-    animation: fadeInUp 2.2s ease-out 1s;
 }
 
 .pricing-wed-features li {
@@ -84,7 +76,6 @@ body {
 
 .pricing-wed-summary {
     margin-top: 20px;
-    animation: fadeInUp 2.5s ease-out 1.3s;
 }
 
 .pricing-wed-total-prices {
@@ -92,17 +83,15 @@ body {
     margin: 5px 0;
     font-weight: 400;
     text-transform: uppercase;
-    animation: fadeInUp 2.8s ease-out 1.6s;
 }
 
 .pricing-wed-info-container {
     position: relative;
-    height: 76vh;
+    height: 76vh; /* Set the height of the image container */
     background-image: url('../images/pricing/gate.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: fadeIn 1.5s ease-in-out 0.8s;
 }
 
 .pricing-wed-info {
@@ -112,55 +101,13 @@ body {
     width: 100%;
     padding: 30px;
     color: rgb(20, 20, 20);
-    z-index: 1;
-}
-
-/* Animation for fading in elements */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Animation for sliding in from left */
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* Animation for sliding in from right */
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* Animation for fading and sliding up */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    z-index: 1; /* Ensures the text is on top of the background image */
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
     .pricing-wed-image {
-        height: 85vh;
+        height: 85vh; /* Decrease image height */
     }
 
     .pricing-wed-details-section {
@@ -177,6 +124,7 @@ body {
 
     .pricing-wed-note {
         font-size: 20px;
+        margin-top: -70px;
     }
 
     .pricing-wed-package-title {
@@ -195,7 +143,7 @@ body {
 
 @media (max-width: 900px) {
     .pricing-wed-image {
-        height: 75vh;
+        height: 75vh; /* Decrease image height further */
     }
 
     .pricing-wed-details-section {
@@ -212,6 +160,7 @@ body {
 
     .pricing-wed-note {
         font-size: 18px;
+        margin-top: -60px;
     }
 
     .pricing-wed-package-title {
@@ -233,7 +182,7 @@ body {
         height: 37vh;
     }
     .pricing-wed-image {
-        height: 37vh;
+        height: 37vh; /* Further decrease image height */
     }
 
     .pricing-wed-details-section {
@@ -242,7 +191,7 @@ body {
 
     .pricing-wed-info-container {
         position: relative;
-        height: 37vh;
+        height: 37vh; /* Set the height of the image container */
         margin-top: -13%;
     }
 

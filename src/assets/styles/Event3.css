@@ -1,121 +1,110 @@
-/* General container styles */
 .event3-container {
     background-color: #39472c; /* Deep green background */
-    padding: 0;
+    padding: 0; /* Remove padding to eliminate any extra space */
     position: relative;
     height: 100vh; /* Full viewport height */
-    overflow: hidden; 
-    box-sizing: border-box; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  
-  .event3-grid {
+    overflow: hidden; /* Prevent any content from exceeding the container */
+    box-sizing: border-box; /* Include padding in height calculation */
+    display: flex; /* Use flexbox to center the grid */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.event3-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 0; 
-    height: 80%; 
-    width: 100%; 
-    align-items: center; 
-    justify-items: center; 
-    position: relative; 
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 0; /* No gap between grid items */
+    height: 80%; /* Adjust grid height for smaller screens */
+    width: 100%; /* Full width for the grid */
+    align-items: center; /* Vertically center items inside the grid */
+    justify-items: center; /* Horizontally center items inside the grid */
+    position: relative; /* Position for absolute leaf containers */
     padding: 325px;
-  }
-  
-  .event3-image {
+}
+
+.event3-image {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; 
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .event3-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 0;
-    box-shadow: none;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  }
-  
-  .event3-image.visible img {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .event3-leaf-left-container,
-  .event3-leaf-right-container {
+    height: 100%; /* Ensure the images take full height */
+    width: 100%; /* Ensure the images take full width */
+    overflow: hidden; /* Prevent overflow if any content exceeds the bounds */
+}
+
+.event3-image img {
+    width: 100%; /* Ensure images stretch to fill the width of their container */
+    height: 100%; /* Ensure images stretch to fill the height of their container */
+    object-fit: contain; /* Ensure the entire image is visible, no cropping */
+    border-radius: 0; /* No rounding to make images fit tightly */
+    box-shadow: none; /* Optional: Remove box-shadow to make them seamless */
+}
+
+.event3-leaf-left-container,
+.event3-leaf-right-container {
     position: absolute;
-    top: 50%;
-    z-index: 10;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .event3-leaf-left-container.visible,
-  .event3-leaf-right-container.visible {
-    opacity: 1;
-  }
-  
-  .event3-leaf-left-container {
-    left: -6%;
-  }
-  
-  .event3-leaf-right-container {
+    top: 50%; /* Center leaves vertically */
+    z-index: 10; /* Ensure leaves are on top of images */
+    transform: translateY(-50%); /* Adjust position to vertically center */
+}
+
+.event3-leaf-left-container {
+    left: -6%; /* Align left leaf with the left side */
+}
+
+.event3-leaf-right-container {
     right: -6%;
-  }
-  
-  .event3-leaf-left,
-  .event3-leaf-right {
-    width: 500px;
-    height: auto;
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+.event3-leaf-left,
+.event3-leaf-right {
+    width: 500px; /* Adjust the width so that they fit within the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+@media (max-width: 1024px) {
     .event3-container {
-      height: auto;
-      padding: 10px;
+        height: auto; /* Adjust container height */
+        padding: 10px; /* Reduce padding */
     }
+
     .event3-grid {
-      width: 85%;
-      height: 70%;
+        width: 85%; /* Slightly narrower grid for medium screens */
+        height: 70%; /* Reduce height */
     }
+
     .event3-leaf-left,
     .event3-leaf-right {
-      width: 500px;
+        width: 500px; /* Smaller leaves for medium screens */
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .event3-container {
-      padding: 10px;
-      height: auto;
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: auto; /* Let content dictate height */
     }
+
     .event3-grid {
-      width: 75%;
-      height: 60%;
-      padding: 30px;
+        width: 75%; /* Slightly wider for smaller screens */
+        height: 60%; /* Adjust grid height */
+        padding: 30px;
     }
+
     .event3-image img {
-      object-fit: cover;
+        object-fit: cover; /* Adjust to make images fit nicely */
     }
+
     .event3-leaf-left-container {
-      left: -35%;
+        left: -35%;
     }
-  
+    
     .event3-leaf-right-container {
-      right: -35%;
+        right: -35%;
     }
-  
+
     .event3-leaf-left,
     .event3-leaf-right {
-      width: 300px;
+        width: 300px; /* Further reduce leaf size for smaller screens */
     }
-  }
-  
+}

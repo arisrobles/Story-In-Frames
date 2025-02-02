@@ -11,7 +11,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for the outro container */
 }
 
 .image-section {
@@ -34,13 +33,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Allows content to stack vertically */
   background: rgba(0, 0, 0, 0.4); /* Transparent dark background */
   color: #ffffff;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  animation: fadeInUp 2s ease-out 0.5s; /* Fade-in and slide-up effect for text overlay */
 }
 
 .outro-text {
@@ -51,7 +49,6 @@ body {
   line-height: 1.4;
   padding: 20px;
   box-sizing: border-box;
-  animation: fadeInUp 2s ease-out 1s; /* Fade-in and slide-up effect for outro text */
 }
 
 .decorative-image {
@@ -59,36 +56,13 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: fadeInUp 2s ease-out 1.5s; /* Fade-in and slide-up effect for decorative image */
 }
 
 .decorative-img {
   width: 100%; /* Full width of the container */
   max-width: 1500px; /* Increased max-width to 1500px */
   height: 60%;
-  object-fit: contain;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Fade and slide-up animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  object-fit: contain; /* Ensures the decorative image fits within the container */
 }
 
 /* Responsive Design */

@@ -1,139 +1,76 @@
 .event-design {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1c1c1c; /* Dark background color */
-  height: 100vh;
-  padding: 20px;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100; /* Thin */
-  position: relative;
-}
-
-.left-column,
-.right-column {
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-.left-column {
-  animation-delay: 0.5s;
-}
-
-.right-column {
-  animation-delay: 1s;
-}
-
-.left-column img,
-.right-column img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  margin: 0 auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.left-column img:hover,
-.right-column img:hover {
-  transform: scale(1.05); /* Hover effect to scale images */
-}
-
-.center-text .real-text {
-  font-size: 50px;
-  margin-top: 50px;
-  padding: 50px;
-  opacity: 0;
-  animation: fadeInText 1s forwards;
-  animation-delay: 1.5s;
-}
-
-.authentic-text span {
-  display: block;
-  font-size: 45px;
-  line-height: 1.2;
-  opacity: 0;
-  animation: letterFadeIn 0.5s forwards;
-  animation-delay: 2s;
-}
-
-.authentic-text span:nth-child(1) {
-  animation-delay: 2s;
-}
-.authentic-text span:nth-child(2) {
-  animation-delay: 2.2s;
-}
-/* Continue this for each letter... */
-.authentic-text span:nth-child(10) {
-  animation-delay: 3.4s;
-}
-
-.icon {
-  margin: 10px 0;
-  font-size: 36px;
-}
-
-.icon img {
-  width: 100px;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.icon img:hover {
-  transform: scale(1.1); /* Hover effect on the leaf icon */
-}
-
-/* Animations */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c; /* Dark background color */
+    height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Thin */
   }
-}
-
-@keyframes fadeInText {
-  to {
-    opacity: 1;
+  
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
   }
-}
-
-@keyframes letterFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .left-column img,
+  .right-column img {
+      width: 100%; /* Reduce the size of the images */
+      max-width: 500px; /* Limit the maximum width */
+      height: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add depth */
+      margin: 0 auto; /* Center images within their columns */
+  }  
+  
+  .center-text .real-text {
+    font-size: 50px; /* Increase the font size of the text */
+    margin-top: 50px;
+    padding: 50px;
   }
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+  
+  .authentic-text span {
+    display: block;
+    font-size: 45px; /* Adjust the size of each letter */
+    line-height: 1.2; /* Adjust line height to reduce space between letters */
   }
-}
-
+  
+  .icon {
+    margin: 10px 0; /* Space for the icon */
+    font-size: 36px; /* Adjust icon size */
+  }
+  
+  .icon img {
+    width: 100px; /* Adjust the width of the leaf icon image */
+    height: 100%;
+    object-fit: contain;
+  }
+  
 /* Responsive Design */
 @media (max-width: 768px) {
   .event-design {
-    height: 30vh;
+    height: 30vh; /* Reduce overall height */
   }
 
   .left-column img,
   .right-column img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Ensure images scale to fit the section */
+    max-width: 100%; /* Prevent images from exceeding the section width */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .center-text .real-text {
-    font-size: 3.5vw;
+    font-size: 3.5vw; /* Smaller text */
     padding: 0 10px;
   }
 
   .authentic-text span {
-    font-size: 3vw;
+    font-size: 3vw; /* Adjust text size for smaller screens */
   }
 
   .icon img {
-    width: 12vw;
+    width: 12vw; /* Reduce icon size */
   }
 }
