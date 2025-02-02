@@ -19,7 +19,7 @@ const Outro = () => {
     });
 
     const elementsToAnimate = document.querySelectorAll(
-      ".outro-container, .outro-image, .text-overlay, .outro-text, .decorative-img"
+      ".outro-container, .outro-image, .text-overlay, .outro-text"
     );
 
     elementsToAnimate.forEach((element) => {
@@ -51,13 +51,6 @@ const Outro = () => {
           COLLABORATING WITH IF YOU <br />
           NEED ONE.
         </h2>
-        <div className="decorative-image">
-          <img
-            src={require("../assets/images/logos/hero-design.png")} // Path to your decorative image
-            alt="Decorative Design"
-            className="decorative-img"
-          />
-        </div>
       </div>
     </div>
   );

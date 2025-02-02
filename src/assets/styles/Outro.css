@@ -83,46 +83,16 @@ body {
   transform: translateY(0);
 }
 
-.decorative-image {
-  margin-top: 30px; /* Adds space between the text and the decorative image */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.decorative-image.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.decorative-img {
-  width: 100%; /* Full width of the container */
-  max-width: 1500px; /* Increased max-width to 1500px */
-  height: 60%;
-  object-fit: contain; /* Ensures the decorative image fits within the container */
-}
-
 /* Responsive Design */
 @media (max-width: 1200px) {
   .outro-text {
     font-size: 3.5rem;
-  }
-
-  .decorative-img {
-    max-width: 1200px;
   }
 }
 
 @media (max-width: 900px) {
   .outro-text {
     font-size: 3rem;
-  }
-
-  .decorative-img {
-    max-width: 1000px;
   }
 }
 
@@ -135,9 +105,5 @@ body {
   .outro-text {
     font-size: 1rem;
     padding: 10px;
-  }
-
-  .decorative-img {
-    max-width: 90%; /* Reduce image size on smaller screens */
   }
 }
