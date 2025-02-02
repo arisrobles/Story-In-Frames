@@ -175,5 +175,6 @@
 
   .rate-icon img {
     width: 80px; /* Adjusted icon size */
+    margin-top: -20px;
   }
 }
