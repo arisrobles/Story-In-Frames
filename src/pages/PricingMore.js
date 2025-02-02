@@ -49,16 +49,18 @@ const PricingMore = () => {
           <div className="pricing-more-infos">
             <ul className="pricing-more-features">
               <li>3-4 HRS</li>
-              <li>350+ (HIGH RESOLUTION)</li>
+              <li>400+ (HIGH RESOLUTION)</li>
               <li>EDITED PICTURES</li>
               <li>USING PREMIUM PRESETS</li>
               <li>10 PREMIUM FILM COLLAGE</li>
               <li>ALL FILES SENT TO GDRIVE</li>
+              <li>OR CAB VE STORED THROUGH</li>
+              <li>FLASHDRIVE</li>
             </ul>
 
             <div className="pricing-more-summary">
               <p className="pricing-more-total-price">
-                TOTAL: 4K + Transpo <br />
+                TOTAL: 4000 + Transpo <br />
                 (Outside Lingayen)
               </p>
             </div>

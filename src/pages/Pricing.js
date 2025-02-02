@@ -49,10 +49,10 @@ const PrenupRates = () => {
           <h3 className="rate-name">BLOOM</h3>
           <ul className="rate-details">
             <li>3-4HRS</li>
-            <li>UNLIMITED SHOT</li>
-            <li>400 (HIGH RESOLUTION)</li>
+            <li>600 raw file</li>
+            <li>300 (HIGH RESOLUTION)</li>
             <li>EDITED PICTURES USING PREMIUM PRESETS</li>
-            <li>4 PREMIUM COLLAGE</li>
+            <li>10 PREMIUM COLLAGE</li>
           </ul>
           <p className="total">TOTAL: 3K + TRANSPO <br /> (OUTSIDE LINGAYEN)</p>
         </div>
@@ -63,13 +63,13 @@ const PrenupRates = () => {
           </div>
           <h3 className="rate-name">LUSTRE</h3>
           <ul className="rate-details">
-            <li>3-4HRS</li>
+            <li>3-5HRS</li>
             <li>UNLIMITED SHOT</li>
-            <li>600 (HIGH RESOLUTION)</li>
+            <li>500 (HIGH RESOLUTION)</li>
             <li>EDITED PICTURES USING PREMIUM PRESETS</li>
-            <li>7 PREMIUM COLLAGE</li>
+            <li>12 PREMIUM COLLAGE</li>
           </ul>
-          <p className="total">TOTAL: 5K + TRANSPO <br /> (OUTSIDE LINGAYEN)</p>
+          <p className="total">TOTAL: 4K + TRANSPO <br /> (OUTSIDE LINGAYEN)</p>
         </div>
 
         <div className="rate-card">
@@ -78,14 +78,15 @@ const PrenupRates = () => {
           </div>
           <h3 className="rate-name">AURORA</h3>
           <ul className="rate-details">
-            <li>3-4HRS</li>
+            <li>3-5HRS</li>
             <li>UNLIMITED SHOT</li>
             <li>700 (HIGH RESOLUTION)</li>
             <li>EDITED PICTURES USING PREMIUM PRESETS</li>
-            <li>10 PREMIUM COLLAGE</li>
+            <li>15 PREMIUM COLLAGE</li>
             <li>PHOTO SLIDESHOW</li>
+            <li>PHOTOS WILL BE STORED IN FLASHDRIVE</li>
           </ul>
-          <p className="total">TOTAL: 7K + TRANSPO <br /> (OUTSIDE LINGAYEN)</p>
+          <p className="total">TOTAL: 5500 + TRANSPO <br /> (OUTSIDE LINGAYEN)</p>
         </div>
       </div>
     </div>

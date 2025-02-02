@@ -71,6 +71,7 @@
 
 .rate-icon img {
   width: 120px; /* Adjusted icon size */
+  margin-top: -40px;
 }
 
 .rate-name {

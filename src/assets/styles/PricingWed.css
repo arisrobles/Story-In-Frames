@@ -81,7 +81,7 @@ body {
     font-weight: bold;
     margin-top: 20px;
     color: #2d6a4f;
-    margin-top: 23%;
+    margin-top: 20%;
     margin-right: 10%;
 }
 
@@ -100,6 +100,7 @@ body {
 
 .pricing-wed-summary {
     margin-top: 20px;
+    margin-right: 10%;
 }
 
 .pricing-wed-total-prices {
@@ -266,7 +267,7 @@ body {
     .pricing-wed-features li {
         font-size: 5px;
         margin-left: -30%;
-        line-height: 6px;
+        line-height: 9px;
     }
 
     .pricing-wed-features {

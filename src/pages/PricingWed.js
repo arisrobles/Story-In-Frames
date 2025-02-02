@@ -64,10 +64,11 @@ const PricingWed = () => {
               <li>USING PREMIUM PRESETS</li>
               <li>5 PREMIUM FILM COLLAGE</li> 
               <li>PHOTO SLIDESHOW</li>
+              <li>HIGHLLIGHTS</li>
             </ul>
 
             <div className="pricing-wed-summary">
-              <p className="pricing-wed-total-prices">TOTAL: 8K + Transpo <br></br>(Outside Lingayen)</p>
+              <p className="pricing-wed-total-prices">TOTAL: 6K + Transpo <br></br>(Outside Lingayen)</p>
             </div>
           </div>
         </div>
